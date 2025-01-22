@@ -7,14 +7,3 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace QLBanDT
-{
-    public partial class khachhang: Form
-    {
-        public khachhang()
-        {
-            InitializeComponent();
-        }
-    }
-}
