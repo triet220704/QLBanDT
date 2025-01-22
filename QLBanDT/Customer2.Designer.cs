@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel36 = new Guna.UI2.WinForms.Guna2DataGridView();
             panel20 = new Panel();
             label6 = new Label();
@@ -54,14 +54,14 @@
             label21 = new Label();
             guna2TextBox24 = new Guna.UI2.WinForms.Guna2TextBox();
             panel33 = new Panel();
+            textBox1 = new TextBox();
             label2 = new Label();
             panel34 = new Panel();
+            textBox2 = new TextBox();
             label3 = new Label();
             panel35 = new Panel();
-            label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             textBox3 = new TextBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)panel36).BeginInit();
             panel20.SuspendLayout();
             panel33.SuspendLayout();
@@ -71,32 +71,32 @@
             // 
             // panel36
             // 
-            dataGridViewCellStyle4.BackColor = Color.White;
-            panel36.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            panel36.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            panel36.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            panel36.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             panel36.ColumnHeadersHeight = 4;
             panel36.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            panel36.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            panel36.DefaultCellStyle = dataGridViewCellStyle3;
             panel36.GridColor = Color.FromArgb(231, 229, 255);
-            panel36.Location = new Point(456, 170);
+            panel36.Location = new Point(502, 159);
             panel36.Name = "panel36";
             panel36.RowHeadersVisible = false;
             panel36.RowHeadersWidth = 51;
-            panel36.Size = new Size(583, 417);
+            panel36.Size = new Size(487, 287);
             panel36.TabIndex = 28;
             panel36.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             panel36.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -158,7 +158,7 @@
             // 
             panel2.BackColor = Color.DeepSkyBlue;
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 720);
+            panel2.Location = new Point(0, 602);
             panel2.Name = "panel2";
             panel2.Size = new Size(1051, 10);
             panel2.TabIndex = 34;
@@ -244,7 +244,7 @@
             // 
             // guna2TextBox26
             // 
-            guna2TextBox26.CustomizableEdges = customizableEdges7;
+            guna2TextBox26.CustomizableEdges = customizableEdges1;
             guna2TextBox26.DefaultText = "";
             guna2TextBox26.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox26.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -260,7 +260,7 @@
             guna2TextBox26.PlaceholderForeColor = Color.DeepSkyBlue;
             guna2TextBox26.PlaceholderText = "";
             guna2TextBox26.SelectedText = "";
-            guna2TextBox26.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2TextBox26.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TextBox26.Size = new Size(207, 39);
             guna2TextBox26.TabIndex = 26;
             // 
@@ -277,7 +277,7 @@
             // 
             // guna2TextBox25
             // 
-            guna2TextBox25.CustomizableEdges = customizableEdges9;
+            guna2TextBox25.CustomizableEdges = customizableEdges3;
             guna2TextBox25.DefaultText = "";
             guna2TextBox25.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox25.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -293,7 +293,7 @@
             guna2TextBox25.PlaceholderForeColor = Color.DeepSkyBlue;
             guna2TextBox25.PlaceholderText = "";
             guna2TextBox25.SelectedText = "";
-            guna2TextBox25.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2TextBox25.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox25.Size = new Size(207, 39);
             guna2TextBox25.TabIndex = 24;
             // 
@@ -310,7 +310,7 @@
             // 
             // guna2TextBox24
             // 
-            guna2TextBox24.CustomizableEdges = customizableEdges11;
+            guna2TextBox24.CustomizableEdges = customizableEdges5;
             guna2TextBox24.DefaultText = "";
             guna2TextBox24.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox24.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -326,7 +326,7 @@
             guna2TextBox24.PlaceholderForeColor = Color.DeepSkyBlue;
             guna2TextBox24.PlaceholderText = "";
             guna2TextBox24.SelectedText = "";
-            guna2TextBox24.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox24.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2TextBox24.Size = new Size(207, 39);
             guna2TextBox24.TabIndex = 22;
             // 
@@ -335,17 +335,30 @@
             panel33.BackColor = Color.LightPink;
             panel33.Controls.Add(textBox1);
             panel33.Controls.Add(label2);
-            panel33.Location = new Point(84, 605);
+            panel33.Location = new Point(69, 484);
             panel33.Name = "panel33";
-            panel33.Size = new Size(216, 98);
+            panel33.Size = new Size(228, 98);
             panel33.TabIndex = 35;
+            panel33.Paint += panel33_Paint;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.LightPink;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = Color.White;
+            textBox1.Location = new Point(15, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(198, 23);
+            textBox1.TabIndex = 26;
+            textBox1.Text = "Số Lượng Đơn Đặt Hàng";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(59, 34);
+            label2.Location = new Point(72, 29);
             label2.Name = "label2";
             label2.Size = new Size(83, 41);
             label2.TabIndex = 25;
@@ -357,17 +370,30 @@
             panel34.BackgroundImageLayout = ImageLayout.None;
             panel34.Controls.Add(textBox2);
             panel34.Controls.Add(label3);
-            panel34.Location = new Point(410, 605);
+            panel34.Location = new Point(419, 484);
             panel34.Name = "panel34";
-            panel34.Size = new Size(219, 98);
+            panel34.Size = new Size(228, 98);
             panel34.TabIndex = 36;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.SeaGreen;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox2.ForeColor = Color.White;
+            textBox2.Location = new Point(35, 3);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(163, 23);
+            textBox2.TabIndex = 27;
+            textBox2.Text = "Số Lượng Đơn Hàng";
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(25, 34);
+            label3.Location = new Point(46, 29);
             label3.Name = "label3";
             label3.Size = new Size(152, 41);
             label3.TabIndex = 25;
@@ -378,46 +404,10 @@
             panel35.BackColor = Color.BurlyWood;
             panel35.Controls.Add(textBox3);
             panel35.Controls.Add(label5);
-            panel35.Location = new Point(735, 605);
+            panel35.Location = new Point(773, 484);
             panel35.Name = "panel35";
-            panel35.Size = new Size(219, 98);
+            panel35.Size = new Size(228, 98);
             panel35.TabIndex = 37;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Transparent;
-            label5.Location = new Point(46, 34);
-            label5.Name = "label5";
-            label5.Size = new Size(93, 41);
-            label5.TabIndex = 25;
-            label5.Text = "Ngày";
-            label5.Click += label5_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.LightPink;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.White;
-            textBox1.Location = new Point(3, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(198, 23);
-            textBox1.TabIndex = 26;
-            textBox1.Text = "Số Lượng Đơn Đặt Hàng";
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.SeaGreen;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(3, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(198, 23);
-            textBox2.TabIndex = 27;
-            textBox2.Text = "Số Lượng Đơn Hàng";
             // 
             // textBox3
             // 
@@ -425,16 +415,28 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(3, 3);
+            textBox3.Location = new Point(9, 3);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(198, 23);
+            textBox3.Size = new Size(216, 23);
             textBox3.TabIndex = 28;
-            textBox3.Text = "Số Lượng Đơn Đặt Hàng";
+            textBox3.Text = "Ngày Đặt Hàng Cuối Cùng";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Transparent;
+            label5.Location = new Point(70, 29);
+            label5.Name = "label5";
+            label5.Size = new Size(93, 41);
+            label5.TabIndex = 25;
+            label5.Text = "Ngày";
+            label5.Click += label5_Click;
             // 
             // Customer2
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1051, 730);
+            ClientSize = new Size(1051, 612);
             Controls.Add(panel35);
             Controls.Add(panel34);
             Controls.Add(panel33);
@@ -454,7 +456,6 @@
             Controls.Add(guna2TextBox24);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Customer2";
-            Text = "Customer2";
             ((System.ComponentModel.ISupportInitialize)panel36).EndInit();
             panel20.ResumeLayout(false);
             panel20.PerformLayout();
