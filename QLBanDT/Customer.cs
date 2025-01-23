@@ -26,5 +26,20 @@ namespace QLBanDT
         {
 
         }
+
+        private void LABEL16_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -89,12 +89,12 @@ namespace QLBanDT
                     // Tạo đối tượng SqlCommand
                     SqlCommand cmd = new SqlCommand(query, con);
 
-                    // Thêm tham số vào câu lệnh SQL
+                   /* // Thêm tham số vào câu lệnh SQL
                     cmd.Parameters.AddWithValue("@Username", unameTb.Text);  // unameTb là textbox cho tên đăng nhập
                     cmd.Parameters.AddWithValue("@HoTen", FnameTb.Text);     // FnameTb là textbox cho họ tên
                     cmd.Parameters.AddWithValue("@Pass", PasswordTb.Text);   // PasswordTb là textbox cho mật khẩu
                     cmd.Parameters.AddWithValue("@sdt", PhoneTb.Text);       // PhoneTb là textbox cho số điện thoại
-
+                   */
                     // Mở kết nối
                     con.Open();
 

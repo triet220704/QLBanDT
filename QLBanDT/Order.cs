@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLBanDT
 {
-    public partial class khachhang: Form
+    public partial class Order : Form
     {
-        public khachhang()
+        public Order()
         {
             InitializeComponent();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
