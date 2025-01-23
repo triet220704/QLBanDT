@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLBanDT
 {
-    public partial class ManageCategories : Form
+    public partial class khachhang: Form
     {
-        public ManageCategories()
+        public khachhang()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
