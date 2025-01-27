@@ -26,7 +26,7 @@ namespace QLBanDT
         // Phương thức điền danh mục sản phẩm vào ComboBox
         void FillCategories()
         {
-            string query = "SELECT LoaiId, TenLoai FROM LoaiSP"; // Lấy cả LoaiId và TenLoai
+            string query = "SELECT LoaiId, TenLoai FROM LoaiSP";
 
             try
             {
@@ -36,18 +36,21 @@ namespace QLBanDT
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         DataTable dt = new DataTable();
-                        dt.Columns.Add("LoaiId", typeof(int));   // Cột LoaiId
-                        dt.Columns.Add("TenLoai", typeof(string)); // Cột TenLoai
+                        dt.Columns.Add("LoaiId", typeof(int));
+                        dt.Columns.Add("TenLoai", typeof(string));
 
                         using (SqlDataReader rdr = cmd.ExecuteReader())
                         {
                             dt.Load(rdr);
                         }
 
-                        // Gán cho ComboBox
-                        comboBox1.ValueMember = "LoaiId";  // Lưu LoaiId khi người dùng chọn một item
-                        comboBox1.DisplayMember = "TenLoai";  // Hiển thị TenLoai trong ComboBox
-                        comboBox1.DataSource = dt;
+                        comboBox1.DataSource = dt.Copy();
+                        comboBox1.ValueMember = "LoaiId";
+                        comboBox1.DisplayMember = "TenLoai";
+                        //code thêm thì bị lỗi
+                        comboBox2.DataSource = dt.Copy();
+                        comboBox2.ValueMember = "TenLoai";
+                        comboBox2.DisplayMember = "TenLoai";
                     }
                 }
             }
@@ -56,6 +59,7 @@ namespace QLBanDT
                 MessageBox.Show($"Lỗi khi tải danh mục sản phẩm: {ex.Message}", "Thông báo");
             }
         }
+
 
         void populate()
         {
@@ -80,7 +84,7 @@ namespace QLBanDT
 
                     // Điền dữ liệu vào DataSet
                     da.Fill(ds);
-
+                    DsUser.DataSource = null;
                     // Gán DataSource cho DataGridView
                     DsUser.DataSource = ds.Tables[0];
 
@@ -97,6 +101,50 @@ namespace QLBanDT
                 MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo");
             }
         }
+        void filterbycategories()
+        {
+            try
+            {
+                if (comboBox2.SelectedValue == null || string.IsNullOrWhiteSpace(comboBox2.SelectedValue.ToString()))
+                {
+                    MessageBox.Show("Vui lòng chọn một danh mục hợp lệ.", "Thông báo");
+                    return;
+                }
+
+                using (SqlConnection con = new SqlConnection(connectionstring))
+                {
+                    con.Open();
+
+                    string myquery = @"
+                SELECT SP.id, SP.TenSP, SP.Gia, SP.SL, SP.ram, SP.pin, SP.bonho, SP.Details, LoaiSP.TenLoai, SP.img
+                FROM SP
+                JOIN LoaiSP ON SP.LoaiId = LoaiSP.LoaiId
+                WHERE LoaiSP.TenLoai = @TenLoai";
+
+                    SqlCommand cmd = new SqlCommand(myquery, con);
+                    cmd.Parameters.Add("@TenLoai", SqlDbType.NVarChar).Value = comboBox2.SelectedValue.ToString();
+
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                   DsUser.DataSource = null; // Xóa nguồn dữ liệu hiện tại
+                    DsUser.DataSource = ds.Tables[0];
+
+                    if (DsUser.Columns.Contains("img"))
+                    {
+                        DsUser.Columns["img"].Visible = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lọc sản phẩm: {ex.Message}", "Thông báo");
+            }
+        }
+
+
+
         private void DsUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //if (DsUser.SelectedRows.Count > 0) { 
@@ -111,14 +159,14 @@ namespace QLBanDT
             comboBox1.Text = DsUser.SelectedRows[0].Cells[8].Value.ToString();
             var imgBytes = DsUser.SelectedRows[0].Cells["img"].Value;
             if (imgBytes != DBNull.Value && imgBytes != null)
-            {                
+            {
                 // Chuyển đổi byte[] thành hình ảnh và hiển thị
                 byte[] imageBytes = (byte[])imgBytes;
                 using (MemoryStream ms = new MemoryStream(imageBytes))
                 {
                     pictureBox1.Image = Image.FromStream(ms);
                 }
-            }            
+            }
         }
 
         private void Products_Load_1(object sender, EventArgs e)
@@ -139,8 +187,8 @@ namespace QLBanDT
             {
                 // Kiểm tra tính hợp lệ của dữ liệu đầu vào
                 if (string.IsNullOrEmpty(unameTb.Text) || string.IsNullOrEmpty(Fnametb.Text) ||
-                    string.IsNullOrEmpty(PasswordTb.Text) || string.IsNullOrEmpty(PhoneTb.Text)
-                    || string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2TextBox2.Text) ||
+                    string.IsNullOrEmpty(PasswordTb.Text) || string.IsNullOrEmpty(PhoneTb.Text) ||
+                    string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2TextBox2.Text) ||
                     string.IsNullOrEmpty(guna2TextBox4.Text) || string.IsNullOrEmpty(guna2TextBox3.Text) ||
                     comboBox1.SelectedValue == null)
                 {
@@ -148,23 +196,12 @@ namespace QLBanDT
                     return;
                 }
 
-                //if (!int.TryParse(PhoneTb.Text, out int soLuong) || soLuong < 0)
-                //{
-                //    MessageBox.Show("Số lượng phải là số nguyên dương!", "Thông báo");
-                //    return;
-                //}
-
-                //if (!decimal.TryParse(PasswordTb.Text, out decimal gia) || gia <= 0)
-                //{
-                //    MessageBox.Show("Giá phải là số dương!", "Thông báo");
-                //    return;
-                //}
-
                 // Tạo kết nối với cơ sở dữ liệu
                 using (SqlConnection con = new SqlConnection(connectionstring))
                 {
-                    string query = "INSERT INTO SP (id, TenSP, Gia,SL,ram,pin,bonho, Details, LoaiId) " +
-                                   "VALUES (@id, @TenSP, @Gia,@SL,@ram,@pin,@bonho, @Details, @LoaiId)";
+                    string query = "INSERT INTO SP (id, TenSP, Gia, SL, ram, pin, bonho, Details, LoaiId, img) " +
+                                   "VALUES (@id, @TenSP, @Gia, @SL, @ram, @pin, @bonho, @Details, @LoaiId, @img)";
+
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@id", unameTb.Text.Trim());
                     cmd.Parameters.AddWithValue("@TenSP", Fnametb.Text.Trim());
@@ -174,26 +211,36 @@ namespace QLBanDT
                     cmd.Parameters.AddWithValue("@pin", guna2TextBox2.Text);
                     cmd.Parameters.AddWithValue("@bonho", guna2TextBox4.Text);
                     cmd.Parameters.AddWithValue("@Details", guna2TextBox3.Text.Trim());
-                    cmd.Parameters.AddWithValue("@LoaiId", comboBox1.SelectedValue); // Lưu LoaiId vào cơ sở dữ liệu
+                    cmd.Parameters.AddWithValue("@LoaiId", comboBox1.SelectedValue);
 
+                    // Kiểm tra và lưu ảnh
                     if (pictureBox1.Image != null)
                     {
-                        using (MemoryStream ms = new MemoryStream())
+                        try
                         {
-                            pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat); // Lưu ảnh vào MemoryStream
-                            byte[] imgBytes = ms.ToArray();
-                            cmd.Parameters.AddWithValue("@img", imgBytes);  // Lưu ảnh dưới dạng byte array
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                                byte[] imgBytes = ms.ToArray();
+                                cmd.Parameters.AddWithValue("@img", imgBytes);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi khi lưu ảnh: {ex.Message}", "Thông báo");
+                            return;
                         }
                     }
                     else
                     {
-                        cmd.Parameters.AddWithValue("@img", DBNull.Value);  // Nếu không có ảnh
+                        cmd.Parameters.AddWithValue("@img", DBNull.Value); // Nếu không có ảnh
                     }
+
                     con.Open();
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo");
-                    populate();
+                    populate();  // Làm mới danh sách sản phẩm
                 }
             }
             catch (Exception ex)
@@ -202,14 +249,16 @@ namespace QLBanDT
             }
         }
 
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
                 // Kiểm tra đầu vào: đảm bảo các textbox không rỗng
                 if (string.IsNullOrEmpty(unameTb.Text) || string.IsNullOrEmpty(Fnametb.Text) ||
-                    string.IsNullOrEmpty(PasswordTb.Text) || string.IsNullOrEmpty(PhoneTb.Text)
-                    || string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2TextBox2.Text) ||
+                    string.IsNullOrEmpty(PasswordTb.Text) || string.IsNullOrEmpty(PhoneTb.Text) ||
+                    string.IsNullOrEmpty(guna2TextBox1.Text) || string.IsNullOrEmpty(guna2TextBox2.Text) ||
                     string.IsNullOrEmpty(guna2TextBox4.Text) || string.IsNullOrEmpty(guna2TextBox3.Text) ||
                     comboBox1.SelectedValue == null)
                 {
@@ -217,32 +266,14 @@ namespace QLBanDT
                     return;
                 }
 
-                // Kiểm tra số lượng và giá trị
-                //if (!int.TryParse(guna2TextBox1.Text, out int soLuong) || soLuong < 0)
-                //{
-                //    MessageBox.Show("Số lượng phải là số nguyên dương!", "Thông báo");
-                //    return;
-                //}
-
-                //if (!decimal.TryParse(guna2TextBox2.Text, out decimal gia) || gia <= 0)
-                //{
-                //    MessageBox.Show("Giá phải là số dương!", "Thông báo");
-                //    return;
-                //}
-
-                // Tạo kết nối với cơ sở dữ liệu
                 using (SqlConnection con = new SqlConnection(connectionstring))
                 {
-                    // Câu lệnh SQL để cập nhật thông tin sản phẩm
                     string query = "UPDATE SP " +
                                    "SET TenSP = @TenSP, Gia = @Gia, SL = @SL, Details = @Details, LoaiId = @LoaiId, img = @img, " +
                                    "ram = @ram, pin = @pin, bonho = @bonho " +
                                    "WHERE id = @id";
 
-                    // Tạo đối tượng SqlCommand
                     SqlCommand cmd = new SqlCommand(query, con);
-
-                    // Thêm tham số vào câu lệnh SQL
                     cmd.Parameters.AddWithValue("@id", unameTb.Text.Trim());
                     cmd.Parameters.AddWithValue("@TenSP", Fnametb.Text.Trim());
                     cmd.Parameters.AddWithValue("@Gia", PasswordTb.Text);
@@ -251,30 +282,34 @@ namespace QLBanDT
                     cmd.Parameters.AddWithValue("@pin", guna2TextBox2.Text);
                     cmd.Parameters.AddWithValue("@bonho", guna2TextBox4.Text);
                     cmd.Parameters.AddWithValue("@Details", guna2TextBox3.Text.Trim());
-                    cmd.Parameters.AddWithValue("@LoaiId", comboBox1.SelectedValue); // Lưu LoaiId vào cơ sở dữ liệu
+                    cmd.Parameters.AddWithValue("@LoaiId", comboBox1.SelectedValue);
 
                     // Xử lý ảnh
                     if (pictureBox1.Image != null)
                     {
-                        using (MemoryStream ms = new MemoryStream())
+                        try
                         {
-                            pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                            byte[] imgBytes = ms.ToArray();
-                            cmd.Parameters.AddWithValue("@img", imgBytes);
+                            using (MemoryStream ms = new MemoryStream())
+                            {
+                                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                                byte[] imgBytes = ms.ToArray();
+                                cmd.Parameters.AddWithValue("@img", imgBytes);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi khi lưu ảnh: {ex.Message}", "Thông báo");
+                            return;
                         }
                     }
                     else
                     {
-                        cmd.Parameters.AddWithValue("@img", DBNull.Value);  // Nếu không có ảnh, dùng DBNull.Value
+                        cmd.Parameters.AddWithValue("@img", DBNull.Value);  // Nếu không có ảnh
                     }
 
-                    // Mở kết nối
                     con.Open();
-
-                    // Thực thi câu lệnh SQL
                     int rowsAffected = cmd.ExecuteNonQuery();
 
-                    // Kiểm tra nếu có dòng nào được cập nhật
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Cập nhật sản phẩm thành công!");
@@ -284,16 +319,16 @@ namespace QLBanDT
                         MessageBox.Show("Không tìm thấy sản phẩm với mã sản phẩm đã nhập.");
                     }
 
-                    // Cập nhật lại danh sách sản phẩm trên DataGridView
-                    populate();
+                    populate();  // Làm mới danh sách sản phẩm
                 }
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi và hiển thị thông báo
                 MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo");
             }
         }
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (unameTb.Text == "")
@@ -349,10 +384,20 @@ namespace QLBanDT
                 ofd.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg;*.jpeg;*.png";
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox1.Image = Image.FromFile(ofd.FileName);
+                    try
+                    {
+                        // Kiểm tra và tải ảnh hợp lệ vào PictureBox
+                        Image img = Image.FromFile(ofd.FileName);
+                        pictureBox1.Image = img;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Không thể tải ảnh: {ex.Message}", "Thông báo");
+                    }
                 }
             }
         }
+
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -364,6 +409,21 @@ namespace QLBanDT
             guna2TextBox2.Text = "";
             guna2TextBox3.Text = "";
             guna2TextBox4.Text = "";
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            filterbycategories();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
