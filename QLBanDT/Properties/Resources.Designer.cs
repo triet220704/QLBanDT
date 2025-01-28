@@ -59,5 +59,15 @@ namespace QLBanDT.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_mobile_phone_with_a_calling_icon_vector_image_png_image_7125034 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-mobile-phone-with-a-calling-icon-vector-image-png-image_7125034", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

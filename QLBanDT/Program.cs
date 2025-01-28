@@ -12,8 +12,8 @@ namespace QLBanDT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Order());
-          
+            Application.Run(new SplashForm());
+
         }
     }
 }
