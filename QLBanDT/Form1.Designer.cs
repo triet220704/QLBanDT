@@ -106,6 +106,11 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "QUẢN TRỊ VIÊN", "BÁN HÀNG" });
             comboBox1.Location = new Point(514, 216);
+
+            comboBox1.Items.AddRange(new object[] { "QUẢN TRỊ VIÊN", "KHÁCH HÀNG" });
+            comboBox1.Location = new Point(450, 162);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
+
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(230, 36);
             comboBox1.TabIndex = 9;
