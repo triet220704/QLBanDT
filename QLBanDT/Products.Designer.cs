@@ -48,6 +48,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
@@ -70,6 +74,9 @@
             button5 = new Button();
             guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             button7 = new Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            comboBox2 = new ComboBox();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DsUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -125,6 +132,7 @@
             button4.TabIndex = 24;
             button4.Text = "TRANG CHỦ";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -211,7 +219,7 @@
             label31.AutoSize = true;
             label31.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label31.ForeColor = Color.DeepSkyBlue;
-            label31.Location = new Point(560, 96);
+            label31.Location = new Point(534, 96);
             label31.Name = "label31";
             label31.Size = new Size(193, 21);
             label31.TabIndex = 32;
@@ -221,6 +229,8 @@
             // 
             DsUser.AllowUserToAddRows = false;
             DsUser.AllowUserToDeleteRows = false;
+            DsUser.AllowUserToResizeColumns = false;
+            DsUser.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             DsUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -232,7 +242,6 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             DsUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             DsUser.ColumnHeadersHeight = 25;
-            DsUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -242,14 +251,15 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             DsUser.DefaultCellStyle = dataGridViewCellStyle3;
             DsUser.GridColor = Color.FromArgb(231, 229, 255);
-            DsUser.Location = new Point(385, 116);
+            DsUser.Location = new Point(385, 138);
             DsUser.Margin = new Padding(3, 2, 3, 2);
             DsUser.Name = "DsUser";
             DsUser.ReadOnly = true;
             DsUser.RowHeadersVisible = false;
             DsUser.RowHeadersWidth = 51;
+            DsUser.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             DsUser.RowTemplate.Height = 30;
-            DsUser.Size = new Size(546, 366);
+            DsUser.Size = new Size(546, 344);
             DsUser.TabIndex = 31;
             DsUser.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             DsUser.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -262,7 +272,7 @@
             DsUser.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             DsUser.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DsUser.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DsUser.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            DsUser.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             DsUser.ThemeStyle.HeaderStyle.Height = 25;
             DsUser.ThemeStyle.ReadOnly = true;
             DsUser.ThemeStyle.RowsStyle.BackColor = Color.White;
@@ -427,6 +437,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 41;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // button5
             // 
@@ -482,11 +493,60 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
+            // guna2Button1
+            // 
+            guna2Button1.CustomizableEdges = customizableEdges17;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = SystemColors.Highlight;
+            guna2Button1.Font = new Font("Segoe UI", 5.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(841, 110);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2Button1.Size = new Size(40, 23);
+            guna2Button1.TabIndex = 46;
+            guna2Button1.Text = "TÌM";
+            guna2Button1.Click += guna2Button1_Click;
+            // 
+            // comboBox2
+            // 
+            comboBox2.ForeColor = Color.DeepSkyBlue;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(722, 110);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(116, 23);
+            comboBox2.TabIndex = 47;
+            comboBox2.Text = "LOẠI SẢN PHẨM";
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.CustomizableEdges = customizableEdges19;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = SystemColors.Highlight;
+            guna2Button2.Font = new Font("Segoe UI", 5.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Location = new Point(884, 110);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Button2.Size = new Size(40, 23);
+            guna2Button2.TabIndex = 48;
+            guna2Button2.Text = "XÓA";
+            guna2Button2.Click += guna2Button2_Click;
+            // 
             // Products
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(935, 494);
+            Controls.Add(guna2Button2);
+            Controls.Add(comboBox2);
+            Controls.Add(guna2Button1);
             Controls.Add(button7);
             Controls.Add(guna2TextBox4);
             Controls.Add(button5);
@@ -544,5 +604,8 @@
         private Button button5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Button button7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private ComboBox comboBox2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

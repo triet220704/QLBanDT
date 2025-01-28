@@ -96,6 +96,7 @@
             panel36.Name = "panel36";
             panel36.RowHeadersVisible = false;
             panel36.RowHeadersWidth = 51;
+            panel36.RowTemplate.Height = 29;
             panel36.Size = new Size(487, 287);
             panel36.TabIndex = 28;
             panel36.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -139,7 +140,7 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(1011, 0);
             label6.Name = "label6";
-            label6.Size = new Size(37, 37);
+            label6.Size = new Size(28, 28);
             label6.TabIndex = 1;
             label6.Text = "X";
             // 
@@ -150,7 +151,7 @@
             label11.ForeColor = Color.White;
             label11.Location = new Point(292, 33);
             label11.Name = "label11";
-            label11.Size = new Size(475, 47);
+            label11.Size = new Size(379, 38);
             label11.TabIndex = 0;
             label11.Text = "QUẢN LÝ KHÁCH HÀNG";
             // 
@@ -176,6 +177,7 @@
             button30.TabIndex = 33;
             button30.Text = "TRANG CHỦ";
             button30.UseVisualStyleBackColor = false;
+            button30.Click += button30_Click;
             // 
             // button29
             // 
@@ -226,7 +228,7 @@
             label31.ForeColor = Color.DeepSkyBlue;
             label31.Location = new Point(604, 128);
             label31.Name = "label31";
-            label31.Size = new Size(270, 28);
+            label31.Size = new Size(214, 21);
             label31.TabIndex = 29;
             label31.Text = "DANH SÁCH KHÁCH HÀNG";
             // 
@@ -237,7 +239,7 @@
             label23.ForeColor = Color.DeepSkyBlue;
             label23.Location = new Point(16, 261);
             label23.Name = "label23";
-            label23.Size = new Size(189, 28);
+            label23.Size = new Size(149, 21);
             label23.TabIndex = 27;
             label23.Text = "SDT KHÁCH HÀNG";
             label23.Click += label14_Click;
@@ -271,7 +273,7 @@
             label22.ForeColor = Color.DeepSkyBlue;
             label22.Location = new Point(16, 210);
             label22.Name = "label22";
-            label22.Size = new Size(191, 28);
+            label22.Size = new Size(151, 21);
             label22.TabIndex = 25;
             label22.Text = "TÊN KHÁCH HÀNG";
             // 
@@ -304,7 +306,7 @@
             label21.ForeColor = Color.DeepSkyBlue;
             label21.Location = new Point(16, 159);
             label21.Name = "label21";
-            label21.Size = new Size(173, 28);
+            label21.Size = new Size(137, 21);
             label21.TabIndex = 23;
             label21.Text = "ID KHÁCH HÀNG";
             // 
@@ -349,7 +351,7 @@
             textBox1.ForeColor = Color.White;
             textBox1.Location = new Point(15, 3);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(198, 23);
+            textBox1.Size = new Size(198, 19);
             textBox1.TabIndex = 26;
             textBox1.Text = "Số Lượng Đơn Đặt Hàng";
             // 
@@ -360,7 +362,7 @@
             label2.ForeColor = Color.Transparent;
             label2.Location = new Point(72, 29);
             label2.Name = "label2";
-            label2.Size = new Size(83, 41);
+            label2.Size = new Size(67, 32);
             label2.TabIndex = 25;
             label2.Text = "Đếm";
             // 
@@ -383,7 +385,7 @@
             textBox2.ForeColor = Color.White;
             textBox2.Location = new Point(35, 3);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(163, 23);
+            textBox2.Size = new Size(163, 19);
             textBox2.TabIndex = 27;
             textBox2.Text = "Số Lượng Đơn Hàng";
             textBox2.TextChanged += textBox2_TextChanged;
@@ -395,7 +397,7 @@
             label3.ForeColor = Color.Transparent;
             label3.Location = new Point(46, 29);
             label3.Name = "label3";
-            label3.Size = new Size(152, 41);
+            label3.Size = new Size(122, 32);
             label3.TabIndex = 25;
             label3.Text = "Số Lượng";
             // 
@@ -417,7 +419,7 @@
             textBox3.ForeColor = Color.White;
             textBox3.Location = new Point(9, 3);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(216, 23);
+            textBox3.Size = new Size(216, 19);
             textBox3.TabIndex = 28;
             textBox3.Text = "Ngày Đặt Hàng Cuối Cùng";
             // 
@@ -428,7 +430,7 @@
             label5.ForeColor = Color.Transparent;
             label5.Location = new Point(70, 29);
             label5.Name = "label5";
-            label5.Size = new Size(93, 41);
+            label5.Size = new Size(74, 32);
             label5.TabIndex = 25;
             label5.Text = "Ngày";
             label5.Click += label5_Click;

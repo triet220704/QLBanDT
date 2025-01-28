@@ -128,7 +128,7 @@ namespace QLBanDT
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     da.Fill(ds);
-                   DsUser.DataSource = null; // Xóa nguồn dữ liệu hiện tại
+                    DsUser.DataSource = null; // Xóa nguồn dữ liệu hiện tại
                     DsUser.DataSource = ds.Tables[0];
 
                     if (DsUser.Columns.Contains("img"))
@@ -424,6 +424,13 @@ namespace QLBanDT
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Homefrom home = new Homefrom();
+            home.Show();
+            this.Hide();
         }
     }
 }
