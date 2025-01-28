@@ -234,5 +234,11 @@ namespace QLBanDT
             }
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Homefrom home = new Homefrom();
+            home.Show();
+            this.Hide();
+        }
     }
 }

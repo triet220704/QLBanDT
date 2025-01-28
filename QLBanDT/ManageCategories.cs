@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLBanDT
 {
-    public partial class ViewOrder : Form
+    public partial class ManageCategories : Form
     {
-        public ViewOrder()
+        public ManageCategories()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

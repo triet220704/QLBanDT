@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD:QLBanDT/Order.cs
+
 
 namespace QLBanDT
 {
@@ -24,5 +24,5 @@ namespace QLBanDT
         }
     }
 }
-=======
->>>>>>> 73e17f7671d7f172b89a49d148d1e55b83ffd7ec:QLBanDT/khachhang.cs
+
+
