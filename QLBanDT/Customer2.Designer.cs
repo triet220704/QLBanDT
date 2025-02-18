@@ -23,21 +23,20 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            panel36 = new Guna.UI2.WinForms.Guna2DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel20 = new Panel();
             label6 = new Label();
             label11 = new Label();
@@ -62,64 +61,14 @@
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)panel36).BeginInit();
+            panel36 = new Guna.UI2.WinForms.Guna2DataGridView();
+            button7 = new Button();
             panel20.SuspendLayout();
             panel33.SuspendLayout();
             panel34.SuspendLayout();
             panel35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)panel36).BeginInit();
             SuspendLayout();
-            // 
-            // panel36
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            panel36.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            panel36.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            panel36.ColumnHeadersHeight = 4;
-            panel36.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            panel36.DefaultCellStyle = dataGridViewCellStyle3;
-            panel36.GridColor = Color.FromArgb(231, 229, 255);
-            panel36.Location = new Point(502, 159);
-            panel36.Name = "panel36";
-            panel36.RowHeadersVisible = false;
-            panel36.RowHeadersWidth = 51;
-            panel36.RowTemplate.Height = 29;
-            panel36.Size = new Size(487, 287);
-            panel36.TabIndex = 28;
-            panel36.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            panel36.ThemeStyle.AlternatingRowsStyle.Font = null;
-            panel36.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            panel36.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            panel36.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            panel36.ThemeStyle.BackColor = Color.White;
-            panel36.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            panel36.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            panel36.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            panel36.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            panel36.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            panel36.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            panel36.ThemeStyle.HeaderStyle.Height = 4;
-            panel36.ThemeStyle.ReadOnly = false;
-            panel36.ThemeStyle.RowsStyle.BackColor = Color.White;
-            panel36.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            panel36.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            panel36.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            panel36.ThemeStyle.RowsStyle.Height = 29;
-            panel36.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            panel36.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
             // panel20
             // 
@@ -140,9 +89,10 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(1011, 0);
             label6.Name = "label6";
-            label6.Size = new Size(28, 28);
+            label6.Size = new Size(37, 37);
             label6.TabIndex = 1;
             label6.Text = "X";
+            label6.Click += label6_Click;
             // 
             // label11
             // 
@@ -151,7 +101,7 @@
             label11.ForeColor = Color.White;
             label11.Location = new Point(292, 33);
             label11.Name = "label11";
-            label11.Size = new Size(379, 38);
+            label11.Size = new Size(475, 47);
             label11.TabIndex = 0;
             label11.Text = "QUẢN LÝ KHÁCH HÀNG";
             // 
@@ -171,7 +121,7 @@
             button30.FlatStyle = FlatStyle.Flat;
             button30.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button30.ForeColor = Color.White;
-            button30.Location = new Point(227, 345);
+            button30.Location = new Point(229, 365);
             button30.Name = "button30";
             button30.Size = new Size(137, 38);
             button30.TabIndex = 33;
@@ -186,12 +136,13 @@
             button29.FlatStyle = FlatStyle.Flat;
             button29.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button29.ForeColor = Color.White;
-            button29.Location = new Point(337, 304);
+            button29.Location = new Point(339, 324);
             button29.Name = "button29";
             button29.Size = new Size(84, 35);
             button29.TabIndex = 32;
             button29.Text = "XOÁ";
             button29.UseVisualStyleBackColor = false;
+            button29.Click += button29_Click;
             // 
             // button28
             // 
@@ -200,12 +151,13 @@
             button28.FlatStyle = FlatStyle.Flat;
             button28.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button28.ForeColor = Color.White;
-            button28.Location = new Point(247, 304);
+            button28.Location = new Point(249, 324);
             button28.Name = "button28";
             button28.Size = new Size(84, 35);
             button28.TabIndex = 31;
             button28.Text = "SỬA";
             button28.UseVisualStyleBackColor = false;
+            button28.Click += button28_Click;
             // 
             // button27
             // 
@@ -214,12 +166,13 @@
             button27.FlatStyle = FlatStyle.Flat;
             button27.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button27.ForeColor = Color.White;
-            button27.Location = new Point(157, 304);
+            button27.Location = new Point(159, 324);
             button27.Name = "button27";
             button27.Size = new Size(84, 35);
             button27.TabIndex = 30;
             button27.Text = "THÊM";
             button27.UseVisualStyleBackColor = false;
+            button27.Click += button27_Click;
             // 
             // label31
             // 
@@ -228,7 +181,7 @@
             label31.ForeColor = Color.DeepSkyBlue;
             label31.Location = new Point(604, 128);
             label31.Name = "label31";
-            label31.Size = new Size(214, 21);
+            label31.Size = new Size(270, 28);
             label31.TabIndex = 29;
             label31.Text = "DANH SÁCH KHÁCH HÀNG";
             // 
@@ -237,9 +190,9 @@
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.DeepSkyBlue;
-            label23.Location = new Point(16, 261);
+            label23.Location = new Point(18, 281);
             label23.Name = "label23";
-            label23.Size = new Size(149, 21);
+            label23.Size = new Size(189, 28);
             label23.TabIndex = 27;
             label23.Text = "SDT KHÁCH HÀNG";
             label23.Click += label14_Click;
@@ -249,9 +202,9 @@
             label22.AutoSize = true;
             label22.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.DeepSkyBlue;
-            label22.Location = new Point(16, 210);
+            label22.Location = new Point(18, 230);
             label22.Name = "label22";
-            label22.Size = new Size(151, 21);
+            label22.Size = new Size(191, 28);
             label22.TabIndex = 25;
             label22.Text = "TÊN KHÁCH HÀNG";
             // 
@@ -260,11 +213,12 @@
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label21.ForeColor = Color.DeepSkyBlue;
-            label21.Location = new Point(16, 159);
+            label21.Location = new Point(18, 179);
             label21.Name = "label21";
-            label21.Size = new Size(137, 21);
+            label21.Size = new Size(173, 28);
             label21.TabIndex = 23;
             label21.Text = "ID KHÁCH HÀNG";
+            label21.Click += label21_Click;
             // 
             // panel33
             // 
@@ -285,7 +239,7 @@
             textBox1.ForeColor = Color.White;
             textBox1.Location = new Point(15, 3);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(198, 19);
+            textBox1.Size = new Size(198, 23);
             textBox1.TabIndex = 26;
             textBox1.Text = "Số Lượng Đơn Đặt Hàng";
             // 
@@ -296,7 +250,7 @@
             label2.ForeColor = Color.Transparent;
             label2.Location = new Point(72, 29);
             label2.Name = "label2";
-            label2.Size = new Size(67, 32);
+            label2.Size = new Size(83, 41);
             label2.TabIndex = 25;
             label2.Text = "Đếm";
             // 
@@ -319,7 +273,7 @@
             textBox2.ForeColor = Color.White;
             textBox2.Location = new Point(35, 3);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(163, 19);
+            textBox2.Size = new Size(163, 23);
             textBox2.TabIndex = 27;
             textBox2.Text = "Số Lượng Đơn Hàng";
             textBox2.TextChanged += textBox2_TextChanged;
@@ -331,7 +285,7 @@
             label3.ForeColor = Color.Transparent;
             label3.Location = new Point(46, 29);
             label3.Name = "label3";
-            label3.Size = new Size(122, 32);
+            label3.Size = new Size(152, 41);
             label3.TabIndex = 25;
             label3.Text = "Số Lượng";
             // 
@@ -353,7 +307,7 @@
             textBox3.ForeColor = Color.White;
             textBox3.Location = new Point(9, 3);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(216, 19);
+            textBox3.Size = new Size(216, 23);
             textBox3.TabIndex = 28;
             textBox3.Text = "Ngày Đặt Hàng Cuối Cùng";
             // 
@@ -364,7 +318,7 @@
             label5.ForeColor = Color.Transparent;
             label5.Location = new Point(70, 29);
             label5.Name = "label5";
-            label5.Size = new Size(74, 32);
+            label5.Size = new Size(93, 41);
             label5.TabIndex = 25;
             label5.Text = "Ngày";
             label5.Click += label5_Click;
@@ -381,10 +335,9 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(214, 157);
+            guna2TextBox1.Location = new Point(216, 177);
             guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -403,10 +356,9 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Segoe UI", 9F);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(214, 256);
+            guna2TextBox2.Location = new Point(216, 230);
             guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -425,27 +377,100 @@
             guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox3.Font = new Font("Segoe UI", 9F);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(214, 208);
+            guna2TextBox3.Location = new Point(216, 277);
             guna2TextBox3.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
             guna2TextBox3.PlaceholderText = "";
             guna2TextBox3.SelectedText = "";
             guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2TextBox3.Size = new Size(200, 32);
             guna2TextBox3.TabIndex = 40;
             // 
+            // panel36
+            // 
+            panel36.AllowUserToAddRows = false;
+            panel36.AllowUserToDeleteRows = false;
+            panel36.AllowUserToResizeColumns = false;
+            panel36.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            panel36.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            panel36.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            panel36.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            panel36.DefaultCellStyle = dataGridViewCellStyle3;
+            panel36.GridColor = Color.FromArgb(231, 229, 255);
+            panel36.Location = new Point(512, 170);
+            panel36.Name = "panel36";
+            panel36.ReadOnly = true;
+            panel36.RowHeadersVisible = false;
+            panel36.RowHeadersWidth = 51;
+            panel36.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            panel36.RowTemplate.Height = 30;
+            panel36.Size = new Size(471, 276);
+            panel36.TabIndex = 41;
+            panel36.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            panel36.ThemeStyle.AlternatingRowsStyle.Font = null;
+            panel36.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            panel36.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            panel36.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            panel36.ThemeStyle.BackColor = Color.White;
+            panel36.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            panel36.ThemeStyle.HeaderStyle.BackColor = Color.DeepSkyBlue;
+            panel36.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            panel36.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            panel36.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            panel36.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            panel36.ThemeStyle.HeaderStyle.Height = 25;
+            panel36.ThemeStyle.ReadOnly = true;
+            panel36.ThemeStyle.RowsStyle.BackColor = Color.White;
+            panel36.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            panel36.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            panel36.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            panel36.ThemeStyle.RowsStyle.Height = 30;
+            panel36.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            panel36.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            panel36.CellContentClick += panel36_CellContentClick_1;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.Silver;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(36, 324);
+            button7.Name = "button7";
+            button7.Size = new Size(42, 33);
+            button7.TabIndex = 46;
+            button7.Text = "XÓA";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
             // Customer2
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1051, 612);
+            Controls.Add(button7);
+            Controls.Add(panel36);
             Controls.Add(guna2TextBox3);
             Controls.Add(guna2TextBox2);
             Controls.Add(guna2TextBox1);
             Controls.Add(panel35);
             Controls.Add(panel34);
             Controls.Add(panel33);
-            Controls.Add(panel36);
             Controls.Add(panel20);
             Controls.Add(panel2);
             Controls.Add(button30);
@@ -459,8 +484,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Location = new Point(100, 100);
             Name = "Customer2";
-            StartPosition = FormStartPosition.Manual;
-            ((System.ComponentModel.ISupportInitialize)panel36).EndInit();
+            Load += Customer2_Load;
             panel20.ResumeLayout(false);
             panel20.PerformLayout();
             panel33.ResumeLayout(false);
@@ -469,36 +493,37 @@
             panel34.PerformLayout();
             panel35.ResumeLayout(false);
             panel35.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)panel36).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2DataGridView panel36;
-        private Panel panel20;
-        private Label label6;
-        private Label label11;
-        private Panel panel2;
-        private Button button30;
-        private Button button29;
-        private Button button28;
-        private Button button27;
-        private Label label31;
-        private Label label23;
-        private Label label22;
-        private Label label21;
-        private Panel panel33;
-        private Label label2;
-        private Panel panel34;
-        private Label label3;
-        private Panel panel35;
-        private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2DataGridView panel36;
+        private Button button7;
     }
 }

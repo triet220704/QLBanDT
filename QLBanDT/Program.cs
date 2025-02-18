@@ -12,7 +12,7 @@ namespace QLBanDT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new SplashForm());
+            Application.Run(new Customer2());
 
         }
     }
