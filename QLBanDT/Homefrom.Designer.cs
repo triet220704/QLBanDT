@@ -235,7 +235,9 @@
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Location = new Point(100, 100);
             Name = "Homefrom";
+            StartPosition = FormStartPosition.Manual;
             Text = "Homefrom";
             Load += Homefrom_Load;
             panel1.ResumeLayout(false);

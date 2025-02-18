@@ -30,15 +30,15 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label6 = new Label();
             label1 = new Label();
@@ -51,11 +51,13 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            DsUser = new Guna.UI2.WinForms.Guna2DataGridView();
             panel2 = new Panel();
             FnameTb = new Guna.UI2.WinForms.Guna2TextBox();
             PasswordTb = new Guna.UI2.WinForms.Guna2TextBox();
             PhoneTb = new Guna.UI2.WinForms.Guna2TextBox();
+            button7 = new Button();
+            DsUser = new Guna.UI2.WinForms.Guna2DataGridView();
+            label31 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DsUser).BeginInit();
             SuspendLayout();
@@ -195,6 +197,7 @@
             button2.TabIndex = 10;
             button2.Text = "SỬA";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // button3
             // 
@@ -210,6 +213,7 @@
             button3.TabIndex = 11;
             button3.Text = "XOÁ";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // button4
             // 
@@ -226,60 +230,6 @@
             button4.Text = "TRANG CHỦ";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
-            // 
-            // DsUser
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            DsUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            DsUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            DsUser.ColumnHeadersHeight = 25;
-            DsUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            DsUser.DefaultCellStyle = dataGridViewCellStyle3;
-            DsUser.GridColor = Color.FromArgb(231, 229, 255);
-            DsUser.Location = new Point(389, 126);
-            DsUser.Margin = new Padding(3, 2, 3, 2);
-            DsUser.Name = "DsUser";
-            DsUser.RowHeadersVisible = false;
-            DsUser.RowHeadersWidth = 51;
-            DsUser.RowTemplate.Height = 30;
-            DsUser.Size = new Size(505, 342);
-            DsUser.TabIndex = 13;
-            DsUser.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            DsUser.ThemeStyle.AlternatingRowsStyle.Font = null;
-            DsUser.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            DsUser.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            DsUser.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DsUser.ThemeStyle.BackColor = Color.White;
-            DsUser.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            DsUser.ThemeStyle.HeaderStyle.BackColor = Color.DeepSkyBlue;
-            DsUser.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            DsUser.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DsUser.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DsUser.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            DsUser.ThemeStyle.HeaderStyle.Height = 25;
-            DsUser.ThemeStyle.ReadOnly = false;
-            DsUser.ThemeStyle.RowsStyle.BackColor = Color.White;
-            DsUser.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DsUser.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            DsUser.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            DsUser.ThemeStyle.RowsStyle.Height = 30;
-            DsUser.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            DsUser.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            DsUser.CellContentClick += DsUser_CellContentClick;
             // 
             // panel2
             // 
@@ -360,17 +310,105 @@
             PhoneTb.Size = new Size(181, 29);
             PhoneTb.TabIndex = 17;
             // 
+            // button7
+            // 
+            button7.BackColor = Color.Silver;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(16, 280);
+            button7.Margin = new Padding(3, 2, 3, 2);
+            button7.Name = "button7";
+            button7.Size = new Size(34, 25);
+            button7.TabIndex = 46;
+            button7.Text = "XÓA";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
+            // DsUser
+            // 
+            DsUser.AllowUserToAddRows = false;
+            DsUser.AllowUserToDeleteRows = false;
+            DsUser.AllowUserToResizeColumns = false;
+            DsUser.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            DsUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            DsUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            DsUser.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            DsUser.DefaultCellStyle = dataGridViewCellStyle3;
+            DsUser.GridColor = Color.FromArgb(231, 229, 255);
+            DsUser.Location = new Point(363, 130);
+            DsUser.Margin = new Padding(3, 2, 3, 2);
+            DsUser.Name = "DsUser";
+            DsUser.ReadOnly = true;
+            DsUser.RowHeadersVisible = false;
+            DsUser.RowHeadersWidth = 51;
+            DsUser.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            DsUser.RowTemplate.Height = 30;
+            DsUser.Size = new Size(546, 331);
+            DsUser.TabIndex = 47;
+            DsUser.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            DsUser.ThemeStyle.AlternatingRowsStyle.Font = null;
+            DsUser.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            DsUser.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            DsUser.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            DsUser.ThemeStyle.BackColor = Color.White;
+            DsUser.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            DsUser.ThemeStyle.HeaderStyle.BackColor = Color.DeepSkyBlue;
+            DsUser.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            DsUser.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DsUser.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            DsUser.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            DsUser.ThemeStyle.HeaderStyle.Height = 25;
+            DsUser.ThemeStyle.ReadOnly = true;
+            DsUser.ThemeStyle.RowsStyle.BackColor = Color.White;
+            DsUser.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DsUser.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            DsUser.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            DsUser.ThemeStyle.RowsStyle.Height = 30;
+            DsUser.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            DsUser.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            DsUser.CellContentClick += DsUser_CellContentClick_1;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label31.ForeColor = Color.DeepSkyBlue;
+            label31.Location = new Point(534, 105);
+            label31.Name = "label31";
+            label31.Size = new Size(214, 21);
+            label31.TabIndex = 48;
+            label31.Text = "DANH SÁCH NGƯỜI DÙNG";
+            // 
             // Splash
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(935, 494);
+            Controls.Add(label31);
+            Controls.Add(DsUser);
+            Controls.Add(button7);
             Controls.Add(PhoneTb);
             Controls.Add(PasswordTb);
             Controls.Add(FnameTb);
             Controls.Add(panel2);
-            Controls.Add(DsUser);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -382,9 +420,10 @@
             Controls.Add(unameTb);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Location = new Point(100, 100);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Splash";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.Manual;
             Text = "Splash";
             Load += Splash_Load;
             panel1.ResumeLayout(false);
@@ -407,11 +446,13 @@
         private Button button2;
         private Button button3;
         private Button button4;
-        private Guna.UI2.WinForms.Guna2DataGridView DsUser;
         private Panel panel2;
         private Label label6;
         private Guna.UI2.WinForms.Guna2TextBox FnameTb;
         private Guna.UI2.WinForms.Guna2TextBox PasswordTb;
         private Guna.UI2.WinForms.Guna2TextBox PhoneTb;
+        private Button button7;
+        private Guna.UI2.WinForms.Guna2DataGridView DsUser;
+        private Label label31;
     }
 }

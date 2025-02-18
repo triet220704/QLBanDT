@@ -78,37 +78,32 @@ namespace QLBanDT
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(unameTb.Text) || string.IsNullOrWhiteSpace(FnameTb.Text) ||
+                string.IsNullOrWhiteSpace(PasswordTb.Text) || string.IsNullOrWhiteSpace(PhoneTb.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                return;
+            }
+
             try
             {
-                // Tạo kết nối với cơ sở dữ liệu
                 using (SqlConnection con = new SqlConnection(connectionstring))
                 {
-                    // Câu lệnh SQL để thêm người dùng
                     string query = "INSERT INTO NguoiDung (Username, HoTen, Pass, sdt) VALUES (@Username, @HoTen, @Pass, @sdt)";
-
-                    // Tạo đối tượng SqlCommand
                     SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Username", unameTb.Text);
+                    cmd.Parameters.AddWithValue("@HoTen", FnameTb.Text);
+                    cmd.Parameters.AddWithValue("@Pass", PasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@sdt", PhoneTb.Text);
 
-                     // Thêm tham số vào câu lệnh SQL
-                     cmd.Parameters.AddWithValue("@Username", unameTb.Text);  // unameTb là textbox cho tên đăng nhập
-                     cmd.Parameters.AddWithValue("@HoTen", FnameTb.Text);     // FnameTb là textbox cho họ tên
-                     cmd.Parameters.AddWithValue("@Pass", PasswordTb.Text);   // PasswordTb là textbox cho mật khẩu
-                     cmd.Parameters.AddWithValue("@sdt", PhoneTb.Text);       // PhoneTb là textbox cho số điện thoại
-                    
-                    // Mở kết nối
                     con.Open();
-
-                    // Thực thi câu lệnh SQL
                     cmd.ExecuteNonQuery();
-
-                    // Thông báo thành công
                     MessageBox.Show("Thêm người dùng thành công!");
                     populate();
                 }
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi và hiển thị thông báo
                 MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo");
             }
         }
@@ -133,112 +128,111 @@ namespace QLBanDT
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Homefrom home = new Homefrom();
+            home.Show();
+            this.Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(unameTb.Text))
+            {
+                MessageBox.Show("Vui lòng chọn người dùng cần sửa!");
+                return;
+            }
+
             try
             {
-                // Kiểm tra đầu vào: đảm bảo các textbox không rỗng
-                if (unameTb.Text == "" || FnameTb.Text == "" || PasswordTb.Text == "" || PhoneTb.Text == "")
-                {
-                    MessageBox.Show("Vui lòng điền đầy đủ thông tin trước khi cập nhật.");
-                    return;
-                }
-
-                // Tạo kết nối với cơ sở dữ liệu
                 using (SqlConnection con = new SqlConnection(connectionstring))
                 {
-                    // Câu lệnh SQL để cập nhật thông tin người dùng
-                    string query = "UPDATE NguoiDung " +
-                                   "SET HoTen = @HoTen, Pass = @Pass, sdt = @sdt " +
-                                   "WHERE Username = @Username";
-
-                    // Tạo đối tượng SqlCommand
+                    string query = "UPDATE NguoiDung SET HoTen = @HoTen, Pass = @Pass, sdt = @sdt WHERE Username = @Username";
                     SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Username", unameTb.Text);
+                    cmd.Parameters.AddWithValue("@HoTen", FnameTb.Text);
+                    cmd.Parameters.AddWithValue("@Pass", PasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@sdt", PhoneTb.Text);
 
-                    // Thêm tham số vào câu lệnh SQL
-                    cmd.Parameters.AddWithValue("@Username", unameTb.Text);  // unameTb là textbox cho tên đăng nhập
-                    cmd.Parameters.AddWithValue("@HoTen", FnameTb.Text);     // FnameTb là textbox cho họ tên
-                    cmd.Parameters.AddWithValue("@Pass", PasswordTb.Text);   // PasswordTb là textbox cho mật khẩu
-                    cmd.Parameters.AddWithValue("@sdt", PhoneTb.Text);       // PhoneTb là textbox cho số điện thoại
-
-                    // Mở kết nối
                     con.Open();
-
-                    // Thực thi câu lệnh SQL
                     int rowsAffected = cmd.ExecuteNonQuery();
 
-                    // Kiểm tra nếu có dòng nào được cập nhật
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Cập nhật người dùng thành công!");
                     }
                     else
                     {
-                        MessageBox.Show("Không tìm thấy người dùng với tài khoản đã nhập.");
+                        MessageBox.Show("Không tìm thấy người dùng!");
                     }
 
-                    // Cập nhật lại danh sách người dùng trên DataGridView
                     populate();
                 }
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi và hiển thị thông báo
                 MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo");
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-            if (unameTb.Text == "")
+            if (string.IsNullOrWhiteSpace(unameTb.Text))
             {
-                MessageBox.Show("Vui lòng nhập tài khoản cần xóa.");
+                MessageBox.Show("Vui lòng chọn người dùng cần xóa!");
                 return;
             }
 
             try
             {
-                // Tạo kết nối với cơ sở dữ liệu
                 using (SqlConnection con = new SqlConnection(connectionstring))
                 {
-                    // Câu lệnh SQL để xóa người dùng theo số điện thoại
-                    string query = "DELETE FROM NguoiDung WHERE username = @username";
-
-                    // Tạo đối tượng SqlCommand
+                    string query = "DELETE FROM NguoiDung WHERE Username = @Username";
                     SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Username", unameTb.Text);
 
-                    // Thêm tham số cho câu lệnh SQL
-                    cmd.Parameters.AddWithValue("@username", unameTb.Text);
-
-                    // Mở kết nối
                     con.Open();
-
-                    // Thực thi câu lệnh SQL
                     int rowsAffected = cmd.ExecuteNonQuery();
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Đã xóa người dùng thành công!");
+                        MessageBox.Show("Xóa người dùng thành công!");
                     }
                     else
                     {
-                        MessageBox.Show("Không tìm thấy người dùng với tài khoản này.");
+                        MessageBox.Show("Không tìm thấy người dùng!");
                     }
 
-                    // Cập nhật lại danh sách người dùng
                     populate();
                 }
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi và hiển thị thông báo
                 MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo");
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            Homefrom home = new Homefrom();
-            home.Show();
-            this.Hide();
+            unameTb.Text = "";
+            FnameTb.Text = "";
+            PasswordTb.Text = "";
+            PhoneTb.Text = "";
+        }
+
+        private void DsUser_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            unameTb.Text = DsUser.SelectedRows[0].Cells[0].Value.ToString();
+            FnameTb.Text = DsUser.SelectedRows[0].Cells[1].Value.ToString();
+            PasswordTb.Text = DsUser.SelectedRows[0].Cells[2].Value.ToString();
+            PhoneTb.Text = DsUser.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 }

@@ -66,6 +66,7 @@
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             button1 = new Button();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CUSTOMERSGV).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DsUser).BeginInit();
@@ -79,8 +80,9 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1069, 125);
+            panel1.Size = new Size(935, 94);
             panel1.TabIndex = 1;
             // 
             // label6
@@ -89,9 +91,9 @@
             label6.BackColor = Color.DeepSkyBlue;
             label6.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(1032, 0);
+            label6.Location = new Point(903, 0);
             label6.Name = "label6";
-            label6.Size = new Size(37, 37);
+            label6.Size = new Size(28, 28);
             label6.TabIndex = 1;
             label6.Text = "X";
             label6.Click += label6_Click;
@@ -101,9 +103,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(323, 34);
+            label1.Location = new Point(283, 26);
             label1.Name = "label1";
-            label1.Size = new Size(427, 47);
+            label1.Size = new Size(337, 38);
             label1.TabIndex = 0;
             label1.Text = "QUẢN LÝ ĐƠN HÀNG";
             // 
@@ -111,9 +113,10 @@
             // 
             panel2.BackColor = Color.DeepSkyBlue;
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 649);
+            panel2.Location = new Point(0, 486);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1069, 10);
+            panel2.Size = new Size(935, 8);
             panel2.TabIndex = 21;
             // 
             // label15
@@ -121,9 +124,9 @@
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.DeepSkyBlue;
-            label15.Location = new Point(75, 141);
+            label15.Location = new Point(66, 106);
             label15.Name = "label15";
-            label15.Size = new Size(311, 31);
+            label15.Size = new Size(259, 25);
             label15.TabIndex = 22;
             label15.Text = "DANH SÁCH KHÁCH HÀNG";
             // 
@@ -150,11 +153,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             CUSTOMERSGV.DefaultCellStyle = dataGridViewCellStyle3;
             CUSTOMERSGV.GridColor = Color.FromArgb(231, 229, 255);
-            CUSTOMERSGV.Location = new Point(12, 175);
+            CUSTOMERSGV.Location = new Point(10, 131);
+            CUSTOMERSGV.Margin = new Padding(3, 2, 3, 2);
             CUSTOMERSGV.Name = "CUSTOMERSGV";
             CUSTOMERSGV.RowHeadersVisible = false;
             CUSTOMERSGV.RowHeadersWidth = 51;
-            CUSTOMERSGV.Size = new Size(443, 202);
+            CUSTOMERSGV.RowTemplate.Height = 29;
+            CUSTOMERSGV.Size = new Size(388, 152);
             CUSTOMERSGV.TabIndex = 23;
             CUSTOMERSGV.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             CUSTOMERSGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -183,9 +188,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.DeepSkyBlue;
-            label2.Location = new Point(16, 400);
+            label2.Location = new Point(14, 300);
             label2.Name = "label2";
-            label2.Size = new Size(163, 28);
+            label2.Size = new Size(128, 21);
             label2.TabIndex = 25;
             label2.Text = "MÃ ĐƠN HÀNG";
             // 
@@ -201,15 +206,15 @@
             unameTb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             unameTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             unameTb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            unameTb.Location = new Point(209, 395);
-            unameTb.Margin = new Padding(5);
+            unameTb.Location = new Point(183, 296);
+            unameTb.Margin = new Padding(4);
             unameTb.Name = "unameTb";
             unameTb.PasswordChar = '\0';
             unameTb.PlaceholderForeColor = Color.DeepSkyBlue;
             unameTb.PlaceholderText = "";
             unameTb.SelectedText = "";
             unameTb.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            unameTb.Size = new Size(207, 39);
+            unameTb.Size = new Size(181, 29);
             unameTb.TabIndex = 24;
             // 
             // label3
@@ -217,9 +222,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.DeepSkyBlue;
-            label3.Location = new Point(16, 444);
+            label3.Location = new Point(14, 333);
             label3.Name = "label3";
-            label3.Size = new Size(185, 28);
+            label3.Size = new Size(146, 21);
             label3.TabIndex = 27;
             label3.Text = "MÃ KHÁCH HÀNG";
             // 
@@ -235,15 +240,15 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(209, 440);
-            guna2TextBox1.Margin = new Padding(5);
+            guna2TextBox1.Location = new Point(183, 330);
+            guna2TextBox1.Margin = new Padding(4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderForeColor = Color.DeepSkyBlue;
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox1.Size = new Size(207, 39);
+            guna2TextBox1.Size = new Size(181, 29);
             guna2TextBox1.TabIndex = 26;
             // 
             // guna2DateTimePicker1
@@ -255,12 +260,13 @@
             guna2DateTimePicker1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2DateTimePicker1.ForeColor = Color.White;
             guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(204, 523);
+            guna2DateTimePicker1.Location = new Point(178, 392);
+            guna2DateTimePicker1.Margin = new Padding(3, 2, 3, 2);
             guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2DateTimePicker1.Size = new Size(250, 45);
+            guna2DateTimePicker1.Size = new Size(219, 34);
             guna2DateTimePicker1.TabIndex = 28;
             guna2DateTimePicker1.Value = new DateTime(2025, 1, 23, 20, 20, 25, 250);
             // 
@@ -269,9 +275,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.DeepSkyBlue;
-            label4.Location = new Point(11, 530);
+            label4.Location = new Point(10, 398);
             label4.Name = "label4";
-            label4.Size = new Size(178, 28);
+            label4.Size = new Size(141, 21);
             label4.TabIndex = 29;
             label4.Text = "NGÀY ĐẶT HÀNG";
             // 
@@ -279,10 +285,9 @@
             // 
             comboBox1.ForeColor = Color.DeepSkyBlue;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(695, 141);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Location = new Point(608, 106);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(154, 28);
+            comboBox1.Size = new Size(135, 23);
             comboBox1.TabIndex = 30;
             comboBox1.Text = "LOẠI SẢN PHẨM";
             // 
@@ -311,13 +316,14 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             DsUser.DefaultCellStyle = dataGridViewCellStyle6;
             DsUser.GridColor = Color.FromArgb(231, 229, 255);
-            DsUser.Location = new Point(479, 176);
+            DsUser.Location = new Point(419, 132);
+            DsUser.Margin = new Padding(3, 2, 3, 2);
             DsUser.Name = "DsUser";
             DsUser.ReadOnly = true;
             DsUser.RowHeadersVisible = false;
             DsUser.RowHeadersWidth = 51;
             DsUser.RowTemplate.Height = 30;
-            DsUser.Size = new Size(565, 201);
+            DsUser.Size = new Size(494, 151);
             DsUser.TabIndex = 32;
             DsUser.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             DsUser.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -352,15 +358,15 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(209, 482);
-            guna2TextBox2.Margin = new Padding(5);
+            guna2TextBox2.Location = new Point(184, 362);
+            guna2TextBox2.Margin = new Padding(4);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderForeColor = Color.Gray;
             guna2TextBox2.PlaceholderText = "TÊN KHÁCH HÀNG";
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox2.Size = new Size(207, 33);
+            guna2TextBox2.Size = new Size(181, 25);
             guna2TextBox2.TabIndex = 33;
             // 
             // label5
@@ -368,9 +374,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.DeepSkyBlue;
-            label5.Location = new Point(471, 395);
+            label5.Location = new Point(412, 296);
             label5.Name = "label5";
-            label5.Size = new Size(163, 28);
+            label5.Size = new Size(128, 21);
             label5.TabIndex = 34;
             label5.Text = "MÃ ĐƠN HÀNG";
             // 
@@ -386,15 +392,15 @@
             guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(642, 395);
-            guna2TextBox3.Margin = new Padding(5);
+            guna2TextBox3.Location = new Point(562, 296);
+            guna2TextBox3.Margin = new Padding(4);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PasswordChar = '\0';
             guna2TextBox3.PlaceholderForeColor = Color.DeepSkyBlue;
             guna2TextBox3.PlaceholderText = "";
             guna2TextBox3.SelectedText = "";
             guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox3.Size = new Size(179, 39);
+            guna2TextBox3.Size = new Size(157, 29);
             guna2TextBox3.TabIndex = 35;
             // 
             // button1
@@ -404,9 +410,10 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(829, 399);
+            button1.Location = new Point(725, 299);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(212, 35);
+            button1.Size = new Size(186, 26);
             button1.TabIndex = 36;
             button1.Text = "THÊM VÀO ĐƠN HÀNG";
             button1.UseVisualStyleBackColor = false;
@@ -436,13 +443,14 @@
             dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
             guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(476, 440);
+            guna2DataGridView1.Location = new Point(416, 330);
+            guna2DataGridView1.Margin = new Padding(3, 2, 3, 2);
             guna2DataGridView1.Name = "guna2DataGridView1";
             guna2DataGridView1.ReadOnly = true;
             guna2DataGridView1.RowHeadersVisible = false;
             guna2DataGridView1.RowHeadersWidth = 51;
             guna2DataGridView1.RowTemplate.Height = 30;
-            guna2DataGridView1.Size = new Size(565, 201);
+            guna2DataGridView1.Size = new Size(494, 151);
             guna2DataGridView1.TabIndex = 37;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -466,11 +474,22 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
+            // button2
+            // 
+            button2.Location = new Point(419, 104);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 38;
+            button2.Text = "home";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Order
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1069, 659);
+            ClientSize = new Size(935, 494);
+            Controls.Add(button2);
             Controls.Add(guna2DataGridView1);
             Controls.Add(button1);
             Controls.Add(guna2TextBox3);
@@ -488,9 +507,12 @@
             Controls.Add(label15);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            ForeColor = Color.Cyan;
             FormBorderStyle = FormBorderStyle.None;
+            Location = new Point(100, 100);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Order";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.Manual;
             Text = "Order";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -522,5 +544,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Button button1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Button button2;
     }
 }

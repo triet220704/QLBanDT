@@ -48,11 +48,8 @@
             button27 = new Button();
             label31 = new Label();
             label23 = new Label();
-            guna2TextBox26 = new Guna.UI2.WinForms.Guna2TextBox();
             label22 = new Label();
-            guna2TextBox25 = new Guna.UI2.WinForms.Guna2TextBox();
             label21 = new Label();
-            guna2TextBox24 = new Guna.UI2.WinForms.Guna2TextBox();
             panel33 = new Panel();
             textBox1 = new TextBox();
             label2 = new Label();
@@ -62,6 +59,9 @@
             panel35 = new Panel();
             textBox3 = new TextBox();
             label5 = new Label();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)panel36).BeginInit();
             panel20.SuspendLayout();
             panel33.SuspendLayout();
@@ -244,28 +244,6 @@
             label23.Text = "SDT KHÁCH HÀNG";
             label23.Click += label14_Click;
             // 
-            // guna2TextBox26
-            // 
-            guna2TextBox26.CustomizableEdges = customizableEdges1;
-            guna2TextBox26.DefaultText = "";
-            guna2TextBox26.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox26.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox26.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox26.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox26.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox26.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox26.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox26.Location = new Point(214, 256);
-            guna2TextBox26.Margin = new Padding(4, 6, 4, 6);
-            guna2TextBox26.Name = "guna2TextBox26";
-            guna2TextBox26.PasswordChar = '\0';
-            guna2TextBox26.PlaceholderForeColor = Color.DeepSkyBlue;
-            guna2TextBox26.PlaceholderText = "";
-            guna2TextBox26.SelectedText = "";
-            guna2TextBox26.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox26.Size = new Size(207, 39);
-            guna2TextBox26.TabIndex = 26;
-            // 
             // label22
             // 
             label22.AutoSize = true;
@@ -277,28 +255,6 @@
             label22.TabIndex = 25;
             label22.Text = "TÊN KHÁCH HÀNG";
             // 
-            // guna2TextBox25
-            // 
-            guna2TextBox25.CustomizableEdges = customizableEdges3;
-            guna2TextBox25.DefaultText = "";
-            guna2TextBox25.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox25.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox25.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox25.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox25.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox25.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox25.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox25.Location = new Point(214, 205);
-            guna2TextBox25.Margin = new Padding(4, 6, 4, 6);
-            guna2TextBox25.Name = "guna2TextBox25";
-            guna2TextBox25.PasswordChar = '\0';
-            guna2TextBox25.PlaceholderForeColor = Color.DeepSkyBlue;
-            guna2TextBox25.PlaceholderText = "";
-            guna2TextBox25.SelectedText = "";
-            guna2TextBox25.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox25.Size = new Size(207, 39);
-            guna2TextBox25.TabIndex = 24;
-            // 
             // label21
             // 
             label21.AutoSize = true;
@@ -309,28 +265,6 @@
             label21.Size = new Size(137, 21);
             label21.TabIndex = 23;
             label21.Text = "ID KHÁCH HÀNG";
-            // 
-            // guna2TextBox24
-            // 
-            guna2TextBox24.CustomizableEdges = customizableEdges5;
-            guna2TextBox24.DefaultText = "";
-            guna2TextBox24.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox24.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox24.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox24.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox24.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox24.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox24.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox24.Location = new Point(214, 159);
-            guna2TextBox24.Margin = new Padding(4, 6, 4, 6);
-            guna2TextBox24.Name = "guna2TextBox24";
-            guna2TextBox24.PasswordChar = '\0';
-            guna2TextBox24.PlaceholderForeColor = Color.DeepSkyBlue;
-            guna2TextBox24.PlaceholderText = "";
-            guna2TextBox24.SelectedText = "";
-            guna2TextBox24.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox24.Size = new Size(207, 39);
-            guna2TextBox24.TabIndex = 22;
             // 
             // panel33
             // 
@@ -435,10 +369,79 @@
             label5.Text = "Ngày";
             label5.Click += label5_Click;
             // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.BorderRadius = 15;
+            guna2TextBox1.CustomizableEdges = customizableEdges1;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Segoe UI", 9F);
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new Point(214, 157);
+            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PasswordChar = '\0';
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2TextBox1.Size = new Size(200, 32);
+            guna2TextBox1.TabIndex = 38;
+            // 
+            // guna2TextBox2
+            // 
+            guna2TextBox2.BorderRadius = 15;
+            guna2TextBox2.CustomizableEdges = customizableEdges3;
+            guna2TextBox2.DefaultText = "";
+            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Font = new Font("Segoe UI", 9F);
+            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Location = new Point(214, 256);
+            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
+            guna2TextBox2.Name = "guna2TextBox2";
+            guna2TextBox2.PasswordChar = '\0';
+            guna2TextBox2.PlaceholderText = "";
+            guna2TextBox2.SelectedText = "";
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2TextBox2.Size = new Size(200, 32);
+            guna2TextBox2.TabIndex = 39;
+            // 
+            // guna2TextBox3
+            // 
+            guna2TextBox3.BorderRadius = 15;
+            guna2TextBox3.CustomizableEdges = customizableEdges5;
+            guna2TextBox3.DefaultText = "";
+            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox3.Font = new Font("Segoe UI", 9F);
+            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox3.Location = new Point(214, 208);
+            guna2TextBox3.Margin = new Padding(3, 4, 3, 4);
+            guna2TextBox3.Name = "guna2TextBox3";
+            guna2TextBox3.PasswordChar = '\0';
+            guna2TextBox3.PlaceholderText = "";
+            guna2TextBox3.SelectedText = "";
+            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2TextBox3.Size = new Size(200, 32);
+            guna2TextBox3.TabIndex = 40;
+            // 
             // Customer2
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1051, 612);
+            Controls.Add(guna2TextBox3);
+            Controls.Add(guna2TextBox2);
+            Controls.Add(guna2TextBox1);
             Controls.Add(panel35);
             Controls.Add(panel34);
             Controls.Add(panel33);
@@ -451,13 +454,12 @@
             Controls.Add(button27);
             Controls.Add(label31);
             Controls.Add(label23);
-            Controls.Add(guna2TextBox26);
             Controls.Add(label22);
-            Controls.Add(guna2TextBox25);
             Controls.Add(label21);
-            Controls.Add(guna2TextBox24);
             FormBorderStyle = FormBorderStyle.None;
+            Location = new Point(100, 100);
             Name = "Customer2";
+            StartPosition = FormStartPosition.Manual;
             ((System.ComponentModel.ISupportInitialize)panel36).EndInit();
             panel20.ResumeLayout(false);
             panel20.PerformLayout();
@@ -484,11 +486,8 @@
         private Button button27;
         private Label label31;
         private Label label23;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox26;
         private Label label22;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox25;
         private Label label21;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox24;
         private Panel panel33;
         private Label label2;
         private Panel panel34;
@@ -498,5 +497,8 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
     }
 }

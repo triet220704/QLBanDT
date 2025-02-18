@@ -37,7 +37,6 @@
             label2 = new Label();
             label1 = new Label();
             label3 = new Label();
-            comboBox1 = new ComboBox();
             button1 = new Button();
             label4 = new Label();
             label5 = new Label();
@@ -82,7 +81,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DeepSkyBlue;
-            label1.Location = new Point(335, 206);
+            label1.Location = new Point(326, 177);
             label1.Name = "label1";
             label1.Size = new Size(96, 21);
             label1.TabIndex = 7;
@@ -94,32 +93,18 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.DeepSkyBlue;
-            label3.Location = new Point(338, 250);
+            label3.Location = new Point(329, 221);
             label3.Name = "label3";
             label3.Size = new Size(94, 21);
             label3.TabIndex = 8;
             label3.Text = "MẬT KHẨU";
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            comboBox1.ForeColor = Color.DeepSkyBlue;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "QUẢN TRỊ VIÊN", "KHÁCH HÀNG" });
-            comboBox1.Location = new Point(448, 159);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(202, 29);
-            comboBox1.TabIndex = 9;
-            comboBox1.Text = "CHỌN CHỨC VỤ";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button1
             // 
             button1.BackColor = Color.DeepSkyBlue;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Azure;
-            button1.Location = new Point(450, 292);
+            button1.Location = new Point(441, 263);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(201, 33);
@@ -133,7 +118,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.DeepSkyBlue;
-            label4.Location = new Point(463, 336);
+            label4.Location = new Point(454, 307);
             label4.Name = "label4";
             label4.Size = new Size(31, 15);
             label4.TabIndex = 11;
@@ -189,7 +174,7 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 9F);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(450, 199);
+            guna2TextBox1.Location = new Point(441, 170);
             guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
@@ -212,7 +197,7 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Segoe UI", 9F);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(450, 244);
+            guna2TextBox2.Location = new Point(441, 215);
             guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '●';
@@ -227,7 +212,7 @@
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.DeepSkyBlue;
-            checkBox1.Location = new Point(517, 336);
+            checkBox1.Location = new Point(508, 307);
             checkBox1.Margin = new Padding(3, 2, 3, 2);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(117, 19);
@@ -251,7 +236,6 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(button1);
-            Controls.Add(comboBox1);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(label2);
@@ -271,7 +255,6 @@
         private Label label2;
         private Label label1;
         private Label label3;
-        private ComboBox comboBox1;
         private Button button1;
         private Label label4;
         private Label label5;

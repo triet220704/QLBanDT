@@ -183,6 +183,7 @@
             // 
             // unameTb
             // 
+            unameTb.BorderRadius = 10;
             unameTb.CustomizableEdges = customizableEdges1;
             unameTb.DefaultText = "";
             unameTb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -295,6 +296,7 @@
             // 
             // Fnametb
             // 
+            Fnametb.BorderRadius = 10;
             Fnametb.CustomizableEdges = customizableEdges3;
             Fnametb.DefaultText = "";
             Fnametb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -317,6 +319,7 @@
             // 
             // PhoneTb
             // 
+            PhoneTb.BorderRadius = 10;
             PhoneTb.CustomizableEdges = customizableEdges5;
             PhoneTb.DefaultText = "";
             PhoneTb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -336,9 +339,11 @@
             PhoneTb.ShadowDecoration.CustomizableEdges = customizableEdges6;
             PhoneTb.Size = new Size(135, 25);
             PhoneTb.TabIndex = 36;
+            PhoneTb.TextChanged += PhoneTb_TextChanged;
             // 
             // PasswordTb
             // 
+            PasswordTb.BorderRadius = 10;
             PasswordTb.CustomizableEdges = customizableEdges7;
             PasswordTb.DefaultText = "";
             PasswordTb.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -361,6 +366,7 @@
             // 
             // guna2TextBox3
             // 
+            guna2TextBox3.BorderRadius = 10;
             guna2TextBox3.CustomizableEdges = customizableEdges9;
             guna2TextBox3.DefaultText = "";
             guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -383,6 +389,7 @@
             // 
             // guna2TextBox2
             // 
+            guna2TextBox2.BorderRadius = 10;
             guna2TextBox2.CustomizableEdges = customizableEdges11;
             guna2TextBox2.DefaultText = "";
             guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -405,6 +412,7 @@
             // 
             // guna2TextBox1
             // 
+            guna2TextBox1.BorderRadius = 10;
             guna2TextBox1.CustomizableEdges = customizableEdges13;
             guna2TextBox1.DefaultText = "";
             guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -457,6 +465,7 @@
             // 
             // guna2TextBox4
             // 
+            guna2TextBox4.BorderRadius = 10;
             guna2TextBox4.CustomizableEdges = customizableEdges15;
             guna2TextBox4.DefaultText = "";
             guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -568,8 +577,9 @@
             Controls.Add(panel1);
             Controls.Add(DsUser);
             FormBorderStyle = FormBorderStyle.None;
+            Location = new Point(100, 100);
             Name = "Products";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.Manual;
             Text = "Products";
             Load += Products_Load_1;
             panel1.ResumeLayout(false);

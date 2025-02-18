@@ -38,7 +38,9 @@ namespace QLBanDT
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            ManageCategories loaisp = new ManageCategories();
+            loaisp.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -50,7 +52,9 @@ namespace QLBanDT
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            Order order = new Order();
+            order.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

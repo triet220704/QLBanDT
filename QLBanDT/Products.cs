@@ -432,5 +432,10 @@ namespace QLBanDT
             home.Show();
             this.Hide();
         }
+
+        private void PhoneTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
