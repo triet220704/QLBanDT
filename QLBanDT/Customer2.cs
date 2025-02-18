@@ -19,7 +19,7 @@ namespace QLBanDT
         {
             InitializeComponent();
         }
-        private string connectionstring = "Server=AHIUS;Database=QLBanDT;Trusted_Connection=True;TrustServerCertificate=True;";
+        private string connectionstring = "Server=DESKTOP-DCQM5O9\\SQLEXPRESS;Database=QLBanDT;Trusted_Connection=True;TrustServerCertificate=True;";
 
         void populate()
         {
@@ -95,6 +95,12 @@ namespace QLBanDT
 
         private void button27_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(guna2TextBox1.Text) || string.IsNullOrWhiteSpace(guna2TextBox2.Text)|| 
+                string.IsNullOrWhiteSpace(guna2TextBox3.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                return;
+            }
             try
             {
                 // Tạo kết nối với cơ sở dữ liệu
@@ -266,25 +272,77 @@ namespace QLBanDT
 
         private void panel36_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            guna2TextBox1.Text = panel36.SelectedRows[0].Cells[0].Value.ToString();
-            guna2TextBox2.Text = panel36.SelectedRows[0].Cells[1].Value.ToString();
-            guna2TextBox3.Text = panel36.SelectedRows[0].Cells[2].Value.ToString();
-            con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select count (*) from KhachHang Where Id = " + guna2TextBox1.Text + "", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            label2.Text = dt.Rows[0][0].ToString();
-            SqlDataAdapter sda1 = new SqlDataAdapter("select count (*) from KhachHang Where Id = " + guna2TextBox1.Text + "", con);
+            if (panel36.SelectedRows.Count > 0)
+            {
+                // Lấy ID khách hàng từ DataGridView
+                guna2TextBox1.Text = panel36.SelectedRows[0].Cells[0].Value.ToString();
+                guna2TextBox2.Text = panel36.SelectedRows[0].Cells[1].Value.ToString();
+                guna2TextBox3.Text = panel36.SelectedRows[0].Cells[2].Value.ToString();
 
-            DataTable dt1 = new DataTable();
-            sda1.Fill(dt1);
-            label3.Text = dt.Rows[0][0].ToString();
+                string customerId = guna2TextBox1.Text;
 
-            SqlDataAdapter sda2 = new SqlDataAdapter("select count (*) from KhachHang Where Id = " + guna2TextBox1.Text + "", con);
-            DataTable dt2 = new DataTable();
-            sda2.Fill(dt2);
-            label5.Text = dt.Rows[0][0].ToString();
-            con.Close();
+                using (SqlConnection con = new SqlConnection(connectionstring))
+                {
+                    try
+                    {
+                        con.Open();
+
+                        // Truy vấn lấy số lượng đơn, tổng tiền và ngày đặt cuối từ bảng DatHang
+                        string query = @"
+                    SELECT 
+                        COUNT(MaDH) AS SoLuongDon, 
+                        ISNULL(SUM(TongTien), 0) AS TongTien, 
+                        MAX(NgayDatHang) AS NgayDatCuoi
+                    FROM DatHang 
+                    WHERE Id = @Id";
+
+                        using (SqlCommand cmd = new SqlCommand(query, con))
+                        {
+                            cmd.Parameters.AddWithValue("@Id", customerId);
+
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    int soLuongDon = Convert.ToInt32(reader["SoLuongDon"]);
+                                    int tongTien = Convert.ToInt32(reader["TongTien"]);
+                                    object ngayDatCuoi = reader["NgayDatCuoi"];
+
+                                    // Kiểm tra nếu khách hàng chưa đặt đơn nào
+                                    if (soLuongDon == 0)
+                                    {
+                                        label2.Text = "0";         // Số lượng đơn hàng
+                                        label3.Text = "0";         // Tổng tiền
+                                        label5.Text = "Chưa có đơn";  // Ngày đặt cuối cùng
+                                    }
+                                    else
+                                    {
+                                        label2.Text = soLuongDon.ToString();
+                                        label3.Text = tongTien.ToString();
+
+                                        // Kiểm tra nếu ngày đặt hàng có giá trị NULL
+                                        if (ngayDatCuoi != DBNull.Value)
+                                            label5.Text = Convert.ToDateTime(ngayDatCuoi).ToString("dd/MM/yyyy");
+                                        else
+                                            label5.Text = "Chưa có đơn";
+                                    }
+                                }
+                                else
+                                {
+                                    label2.Text = "0";
+                                    label3.Text = "0";
+                                    label5.Text = "Chưa có đơn";
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi: {ex.Message}", "Thông báo");
+                    }
+                }
+            }
         }
+
     }
 }
