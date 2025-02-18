@@ -70,6 +70,60 @@
             ((System.ComponentModel.ISupportInitialize)panel36).BeginInit();
             SuspendLayout();
             // 
+<<<<<<< Updated upstream
+=======
+            // panel36
+            // 
+            dataGridViewCellStyle1.BackColor = Color.White;
+            panel36.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            panel36.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            panel36.ColumnHeadersHeight = 4;
+            panel36.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            panel36.DefaultCellStyle = dataGridViewCellStyle3;
+            panel36.GridColor = Color.FromArgb(231, 229, 255);
+            panel36.Location = new Point(502, 159);
+            panel36.Name = "panel36";
+            panel36.RowHeadersVisible = false;
+            panel36.RowHeadersWidth = 51;
+            panel36.Size = new Size(487, 287);
+            panel36.TabIndex = 28;
+            panel36.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            panel36.ThemeStyle.AlternatingRowsStyle.Font = null;
+            panel36.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            panel36.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            panel36.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            panel36.ThemeStyle.BackColor = Color.White;
+            panel36.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            panel36.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            panel36.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            panel36.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            panel36.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            panel36.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            panel36.ThemeStyle.HeaderStyle.Height = 4;
+            panel36.ThemeStyle.ReadOnly = false;
+            panel36.ThemeStyle.RowsStyle.BackColor = Color.White;
+            panel36.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            panel36.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            panel36.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            panel36.ThemeStyle.RowsStyle.Height = 29;
+            panel36.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            panel36.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            // 
+>>>>>>> Stashed changes
             // panel20
             // 
             panel20.BackColor = Color.DeepSkyBlue;
@@ -485,6 +539,10 @@
             Location = new Point(100, 100);
             Name = "Customer2";
             Load += Customer2_Load;
+<<<<<<< Updated upstream
+=======
+            ((System.ComponentModel.ISupportInitialize)panel36).EndInit();
+>>>>>>> Stashed changes
             panel20.ResumeLayout(false);
             panel20.PerformLayout();
             panel33.ResumeLayout(false);

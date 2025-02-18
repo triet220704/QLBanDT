@@ -59,7 +59,6 @@
             button2 = new Button();
             button1 = new Button();
             unameTb = new Guna.UI2.WinForms.Guna2TextBox();
-            comboBox1 = new ComboBox();
             label31 = new Label();
             DsUser = new Guna.UI2.WinForms.Guna2DataGridView();
             panel2 = new Panel();
@@ -76,6 +75,7 @@
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             comboBox2 = new ComboBox();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DsUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -88,9 +88,8 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(935, 94);
+            panel1.Size = new Size(1069, 125);
             panel1.TabIndex = 1;
             // 
             // label6
@@ -99,9 +98,9 @@
             label6.BackColor = Color.DeepSkyBlue;
             label6.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(903, 0);
+            label6.Location = new Point(1032, 0);
             label6.Name = "label6";
-            label6.Size = new Size(28, 28);
+            label6.Size = new Size(37, 37);
             label6.TabIndex = 1;
             label6.Text = "X";
             label6.Click += label6_Click;
@@ -111,9 +110,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(256, 25);
+            label1.Location = new Point(293, 33);
             label1.Name = "label1";
-            label1.Size = new Size(319, 38);
+            label1.Size = new Size(406, 47);
             label1.TabIndex = 0;
             label1.Text = "QUẢN LÝ SẢN PHẨM";
             // 
@@ -124,10 +123,9 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(199, 399);
-            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Location = new Point(227, 532);
             button4.Name = "button4";
-            button4.Size = new Size(120, 28);
+            button4.Size = new Size(137, 37);
             button4.TabIndex = 24;
             button4.Text = "TRANG CHỦ";
             button4.UseVisualStyleBackColor = false;
@@ -140,10 +138,9 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(305, 369);
-            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Location = new Point(349, 492);
             button3.Name = "button3";
-            button3.Size = new Size(74, 26);
+            button3.Size = new Size(85, 35);
             button3.TabIndex = 23;
             button3.Text = "XOÁ";
             button3.UseVisualStyleBackColor = false;
@@ -156,10 +153,9 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(228, 369);
-            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Location = new Point(261, 492);
             button2.Name = "button2";
-            button2.Size = new Size(74, 26);
+            button2.Size = new Size(85, 35);
             button2.TabIndex = 22;
             button2.Text = "SỬA";
             button2.UseVisualStyleBackColor = false;
@@ -172,10 +168,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(151, 369);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(173, 492);
             button1.Name = "button1";
-            button1.Size = new Size(74, 26);
+            button1.Size = new Size(85, 35);
             button1.TabIndex = 21;
             button1.Text = "THÊM";
             button1.UseVisualStyleBackColor = false;
@@ -193,35 +188,26 @@
             unameTb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             unameTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             unameTb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            unameTb.Location = new Point(8, 116);
-            unameTb.Margin = new Padding(4);
+            unameTb.Location = new Point(9, 155);
+            unameTb.Margin = new Padding(5);
             unameTb.Name = "unameTb";
             unameTb.PasswordChar = '\0';
             unameTb.PlaceholderForeColor = Color.Gray;
             unameTb.PlaceholderText = "MÃ SẢN PHẨM";
             unameTb.SelectedText = "";
             unameTb.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            unameTb.Size = new Size(135, 25);
+            unameTb.Size = new Size(154, 33);
             unameTb.TabIndex = 13;
-            // 
-            // comboBox1
-            // 
-            comboBox1.ForeColor = Color.DeepSkyBlue;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(9, 371);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(135, 23);
-            comboBox1.TabIndex = 28;
-            comboBox1.Text = "LOẠI SẢN PHẨM";
+            unameTb.TextChanged += unameTb_TextChanged;
             // 
             // label31
             // 
             label31.AutoSize = true;
             label31.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label31.ForeColor = Color.DeepSkyBlue;
-            label31.Location = new Point(534, 96);
+            label31.Location = new Point(567, 143);
             label31.Name = "label31";
-            label31.Size = new Size(193, 21);
+            label31.Size = new Size(243, 28);
             label31.TabIndex = 32;
             label31.Text = "DANH SÁCH SẢN PHẨM";
             // 
@@ -251,15 +237,14 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             DsUser.DefaultCellStyle = dataGridViewCellStyle3;
             DsUser.GridColor = Color.FromArgb(231, 229, 255);
-            DsUser.Location = new Point(385, 138);
-            DsUser.Margin = new Padding(3, 2, 3, 2);
+            DsUser.Location = new Point(440, 184);
             DsUser.Name = "DsUser";
             DsUser.ReadOnly = true;
             DsUser.RowHeadersVisible = false;
             DsUser.RowHeadersWidth = 51;
             DsUser.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             DsUser.RowTemplate.Height = 30;
-            DsUser.Size = new Size(546, 344);
+            DsUser.Size = new Size(624, 459);
             DsUser.TabIndex = 31;
             DsUser.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             DsUser.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -288,10 +273,9 @@
             // 
             panel2.BackColor = Color.DeepSkyBlue;
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 486);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(0, 648);
             panel2.Name = "panel2";
-            panel2.Size = new Size(935, 8);
+            panel2.Size = new Size(1069, 11);
             panel2.TabIndex = 33;
             // 
             // Fnametb
@@ -306,16 +290,17 @@
             Fnametb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             Fnametb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Fnametb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Fnametb.Location = new Point(8, 148);
-            Fnametb.Margin = new Padding(4);
+            Fnametb.Location = new Point(9, 197);
+            Fnametb.Margin = new Padding(5);
             Fnametb.Name = "Fnametb";
             Fnametb.PasswordChar = '\0';
             Fnametb.PlaceholderForeColor = Color.Gray;
             Fnametb.PlaceholderText = "TÊN SẢN PHẨM";
             Fnametb.SelectedText = "";
             Fnametb.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            Fnametb.Size = new Size(135, 25);
+            Fnametb.Size = new Size(154, 33);
             Fnametb.TabIndex = 35;
+            Fnametb.TextChanged += Fnametb_TextChanged;
             // 
             // PhoneTb
             // 
@@ -329,15 +314,15 @@
             PhoneTb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             PhoneTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PhoneTb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            PhoneTb.Location = new Point(8, 212);
-            PhoneTb.Margin = new Padding(4);
+            PhoneTb.Location = new Point(9, 283);
+            PhoneTb.Margin = new Padding(5);
             PhoneTb.Name = "PhoneTb";
             PhoneTb.PasswordChar = '\0';
             PhoneTb.PlaceholderForeColor = Color.Gray;
             PhoneTb.PlaceholderText = "SỐ LƯỢNG";
             PhoneTb.SelectedText = "";
             PhoneTb.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            PhoneTb.Size = new Size(135, 25);
+            PhoneTb.Size = new Size(154, 33);
             PhoneTb.TabIndex = 36;
             PhoneTb.TextChanged += PhoneTb_TextChanged;
             // 
@@ -353,16 +338,17 @@
             PasswordTb.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             PasswordTb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordTb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            PasswordTb.Location = new Point(8, 180);
-            PasswordTb.Margin = new Padding(4);
+            PasswordTb.Location = new Point(9, 240);
+            PasswordTb.Margin = new Padding(5);
             PasswordTb.Name = "PasswordTb";
             PasswordTb.PasswordChar = '\0';
             PasswordTb.PlaceholderForeColor = Color.Gray;
             PasswordTb.PlaceholderText = "GIÁ";
             PasswordTb.SelectedText = "";
             PasswordTb.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            PasswordTb.Size = new Size(135, 25);
+            PasswordTb.Size = new Size(154, 33);
             PasswordTb.TabIndex = 37;
+            PasswordTb.TextChanged += PasswordTb_TextChanged;
             // 
             // guna2TextBox3
             // 
@@ -376,15 +362,15 @@
             guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(8, 340);
-            guna2TextBox3.Margin = new Padding(4);
+            guna2TextBox3.Location = new Point(9, 453);
+            guna2TextBox3.Margin = new Padding(5);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PasswordChar = '\0';
             guna2TextBox3.PlaceholderForeColor = Color.Gray;
             guna2TextBox3.PlaceholderText = "MÔ TẢ";
             guna2TextBox3.SelectedText = "";
             guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox3.Size = new Size(135, 25);
+            guna2TextBox3.Size = new Size(154, 33);
             guna2TextBox3.TabIndex = 38;
             // 
             // guna2TextBox2
@@ -399,15 +385,15 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(8, 276);
-            guna2TextBox2.Margin = new Padding(4);
+            guna2TextBox2.Location = new Point(9, 368);
+            guna2TextBox2.Margin = new Padding(5);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderForeColor = Color.Gray;
             guna2TextBox2.PlaceholderText = "PIN";
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox2.Size = new Size(135, 25);
+            guna2TextBox2.Size = new Size(154, 33);
             guna2TextBox2.TabIndex = 39;
             // 
             // guna2TextBox1
@@ -422,15 +408,15 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(8, 244);
-            guna2TextBox1.Margin = new Padding(4);
+            guna2TextBox1.Location = new Point(9, 325);
+            guna2TextBox1.Margin = new Padding(5);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderForeColor = Color.Gray;
             guna2TextBox1.PlaceholderText = "RAM";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox1.Size = new Size(135, 25);
+            guna2TextBox1.Size = new Size(154, 33);
             guna2TextBox1.TabIndex = 40;
             // 
             // pictureBox1
@@ -439,9 +425,10 @@
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.ErrorImage = null;
             pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(158, 116);
+            pictureBox1.Location = new Point(181, 155);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(205, 217);
+            pictureBox1.Size = new Size(234, 289);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 41;
             pictureBox1.TabStop = false;
@@ -454,10 +441,9 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(222, 338);
-            button5.Margin = new Padding(3, 2, 3, 2);
+            button5.Location = new Point(254, 451);
             button5.Name = "button5";
-            button5.Size = new Size(75, 25);
+            button5.Size = new Size(86, 33);
             button5.TabIndex = 42;
             button5.Text = "CHỌN ẢNH";
             button5.UseVisualStyleBackColor = false;
@@ -475,15 +461,15 @@
             guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(8, 308);
-            guna2TextBox4.Margin = new Padding(4);
+            guna2TextBox4.Location = new Point(9, 411);
+            guna2TextBox4.Margin = new Padding(5);
             guna2TextBox4.Name = "guna2TextBox4";
             guna2TextBox4.PasswordChar = '\0';
             guna2TextBox4.PlaceholderForeColor = Color.Gray;
             guna2TextBox4.PlaceholderText = "BỘ NHỚ";
             guna2TextBox4.SelectedText = "";
             guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox4.Size = new Size(135, 25);
+            guna2TextBox4.Size = new Size(154, 33);
             guna2TextBox4.TabIndex = 43;
             // 
             // button7
@@ -493,10 +479,9 @@
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Segoe UI", 6.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(53, 399);
-            button7.Margin = new Padding(3, 2, 3, 2);
+            button7.Location = new Point(48, 530);
             button7.Name = "button7";
-            button7.Size = new Size(34, 25);
+            button7.Size = new Size(49, 33);
             button7.TabIndex = 45;
             button7.Text = "XÓA";
             button7.UseVisualStyleBackColor = false;
@@ -512,10 +497,11 @@
             guna2Button1.FillColor = SystemColors.Highlight;
             guna2Button1.Font = new Font("Segoe UI", 5.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(841, 110);
+            guna2Button1.Location = new Point(961, 147);
+            guna2Button1.Margin = new Padding(3, 4, 3, 4);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Button1.Size = new Size(40, 23);
+            guna2Button1.Size = new Size(46, 31);
             guna2Button1.TabIndex = 46;
             guna2Button1.Text = "TÌM";
             guna2Button1.Click += guna2Button1_Click;
@@ -524,11 +510,14 @@
             // 
             comboBox2.ForeColor = Color.DeepSkyBlue;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(722, 110);
+            comboBox2.Items.AddRange(new object[] { "Laptop", "Phone" });
+            comboBox2.Location = new Point(816, 147);
+            comboBox2.Margin = new Padding(3, 4, 3, 4);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(116, 23);
+            comboBox2.Size = new Size(141, 28);
             comboBox2.TabIndex = 47;
             comboBox2.Text = "LOẠI SẢN PHẨM";
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // guna2Button2
             // 
@@ -540,19 +529,33 @@
             guna2Button2.FillColor = SystemColors.Highlight;
             guna2Button2.Font = new Font("Segoe UI", 5.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button2.ForeColor = Color.White;
-            guna2Button2.Location = new Point(884, 110);
+            guna2Button2.Location = new Point(1010, 147);
+            guna2Button2.Margin = new Padding(3, 4, 3, 4);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2Button2.Size = new Size(40, 23);
+            guna2Button2.Size = new Size(46, 31);
             guna2Button2.TabIndex = 48;
             guna2Button2.Text = "XÓA";
             guna2Button2.Click += guna2Button2_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.ForeColor = Color.DeepSkyBlue;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Laptop", "Phone" });
+            comboBox1.Location = new Point(10, 495);
+            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(154, 28);
+            comboBox1.TabIndex = 28;
+            comboBox1.Text = "LOẠI SẢN PHẨM";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // Products
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(935, 494);
+            ClientSize = new Size(1069, 659);
             Controls.Add(guna2Button2);
             Controls.Add(comboBox2);
             Controls.Add(guna2Button1);
@@ -577,7 +580,11 @@
             Controls.Add(panel1);
             Controls.Add(DsUser);
             FormBorderStyle = FormBorderStyle.None;
+<<<<<<< Updated upstream
             Location = new Point(100, 100);
+=======
+            Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             Name = "Products";
             StartPosition = FormStartPosition.Manual;
             Text = "Products";
@@ -600,7 +607,6 @@
         private Button button2;
         private Button button1;
         private Guna.UI2.WinForms.Guna2TextBox unameTb;
-        private ComboBox comboBox1;
         private Label label31;
         private Guna.UI2.WinForms.Guna2DataGridView DsUser;
         private Panel panel2;
@@ -617,5 +623,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private ComboBox comboBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private ComboBox comboBox1;
     }
 }

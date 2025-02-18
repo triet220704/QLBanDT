@@ -12,7 +12,11 @@ namespace QLBanDT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+<<<<<<< Updated upstream
             Application.Run(new Customer2());
+=======
+            Application.Run(new Order());
+>>>>>>> Stashed changes
 
         }
     }

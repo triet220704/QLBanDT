@@ -16,7 +16,7 @@ namespace QLBanDT
     public partial class Products : Form
     {
         // Chuỗi kết nối tới cơ sở dữ liệu
-        private string connectionstring = "Server=DESKTOP-DCQM5O9\\SQLEXPRESS;Database=QLBanDT;Trusted_Connection=True;TrustServerCertificate=True;";
+        private string connectionstring = "Data Source=LAPTOP-AS1JC9I8\\MSSQLSERVER02;Initial Catalog=QLBanDT;Integrated Security=True;Trust Server Certificate=True";
 
         public Products()
         {
@@ -44,13 +44,20 @@ namespace QLBanDT
                             dt.Load(rdr);
                         }
 
-                        comboBox1.DataSource = dt.Copy();
-                        comboBox1.ValueMember = "LoaiId";
-                        comboBox1.DisplayMember = "TenLoai";
-                        //code thêm thì bị lỗi
-                        comboBox2.DataSource = dt.Copy();
-                        comboBox2.ValueMember = "TenLoai";
-                        comboBox2.DisplayMember = "TenLoai";
+                        if (dt.Rows.Count > 0) // Kiểm tra nếu có dữ liệu mới gán DataSource
+                        {
+                            // Gán dữ liệu cho comboBox1
+                            comboBox1.DataSource = dt;
+                            comboBox1.ValueMember = "LoaiId";
+                            comboBox1.DisplayMember = "TenLoai";
+
+                            // Gán dữ liệu cho comboBox2 (cần sử dụng Copy để tránh lỗi)
+                            DataTable dt2 = dt.Copy();
+                            comboBox2.DataSource = dt2;
+                            comboBox2.ValueMember = "LoaiId"; // Dùng LoaiId thay vì TenLoai
+                            comboBox2.DisplayMember = "TenLoai";
+                        }
+
                     }
                 }
             }
@@ -59,6 +66,7 @@ namespace QLBanDT
                 MessageBox.Show($"Lỗi khi tải danh mục sản phẩm: {ex.Message}", "Thông báo");
             }
         }
+
 
 
         void populate()
@@ -433,9 +441,40 @@ namespace QLBanDT
             this.Hide();
         }
 
+<<<<<<< Updated upstream
+=======
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fnametb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+>>>>>>> Stashed changes
         private void PhoneTb_TextChanged(object sender, EventArgs e)
         {
 
         }
+<<<<<<< Updated upstream
+=======
+
+        private void unameTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }

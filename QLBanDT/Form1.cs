@@ -147,5 +147,12 @@ namespace QLBanDT
             }
         }
 
+<<<<<<< Updated upstream
+=======
+        private void guna2TextBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }

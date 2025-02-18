@@ -15,6 +15,8 @@ namespace QLBanDT
 {
     public partial class Customer2 : Form
     {
+        // Chuỗi kết nối tới cơ sở dữ liệu
+        private string connectionstring = "Data Source=LAPTOP-AS1JC9I8\\MSSQLSERVER02;Initial Catalog=QLBanDT;Integrated Security=True;Trust Server Certificate=True";
         public Customer2()
         {
             InitializeComponent();
@@ -93,6 +95,7 @@ namespace QLBanDT
             this.Hide();
         }
 
+<<<<<<< Updated upstream
         private void button27_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(guna2TextBox1.Text) || string.IsNullOrWhiteSpace(guna2TextBox2.Text)|| 
@@ -344,5 +347,16 @@ namespace QLBanDT
             }
         }
 
+=======
+        private void Customer2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }
